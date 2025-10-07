@@ -131,11 +131,6 @@ header .logo {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-header .logo img {
-    max-width: 150px;
-    height: auto;
-}
-
 header nav ul {
   display: flex;
   list-style: none;
