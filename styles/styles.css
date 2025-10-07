@@ -126,7 +126,7 @@ header {
 }
 
 header .logo {
-  font-size: 20px;
+  font-size: var(--font-size-3xl);
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -1057,18 +1057,5 @@ body:has(.data-management-section) footer {
 @keyframes spin {
   to {
     transform: rotate(360deg);
-  }
-}
-
-/* Dark mode support (optionnel) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-primary: #f0f0f0;
-    --text-secondary: #d0d0d0;
-    --text-light: #b0b0b0;
-    --background-white: #1a1a1a;
-    --background-light: #2d2d2d;
-    --border-color: #404040;
-    --border-light: #555;
   }
 }
