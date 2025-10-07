@@ -1,5 +1,5 @@
 /**
- * JobMatch+ Dynamic Cookie Loader
+ * JobMatch Dynamic Cookie Loader
  * Intelligent resource loader for cookie banner components
  * 
  * Features:

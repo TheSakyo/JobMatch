@@ -1,5 +1,5 @@
 /**
- * JobMatch+ Premium Page Script
+ * JobMatch Premium Page Script
  * Handles subscription plan selection, payment form validation, and simulation
  */
 

@@ -1,5 +1,5 @@
 /**
- * JobMatch+ Main Script
+ * JobMatch Main Script
  * Handles page interactions, animations, and user experience enhancements
  */
 
@@ -30,10 +30,10 @@ class JobMatchApp {
       this.setupProgressiveEnhancement();
       
       this.isInitialized = true;
-      console.log('JobMatch+ app initialized successfully.');
+      console.log('JobMatch app initialized successfully.');
       
     } catch (error) {
-      console.error('Error initializing JobMatch+ app:', error);
+      console.error('Error initializing JobMatch app:', error);
     }
   }
   

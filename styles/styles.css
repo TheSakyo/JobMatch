@@ -1,5 +1,5 @@
 /* ========================================
-   JOBMATCH+ - CSS UNIFIÉ
+   JobMatch - CSS UNIFIÉ
    ======================================== */
 
 /* Variables CSS pour une maintenance facile */
@@ -126,7 +126,7 @@ header {
 }
 
 header .logo {
-  font-size: var(--font-sm);
+  font-size: 20px;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

@@ -1,266 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - JobMatch+</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JobMatch - Bandeau Cookies</title>
+<link rel="stylesheet" href="cookie.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <img src="../images/logo.png" alt="JobMatch Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="signup.html">Inscription</a></li>
-                <li><a href="profile.html">Mon profil</a></li>
-                <li><a href="data-management.html">Mes données</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="contact-container">
-        <h1>📞 Contactez-nous</h1>
-        <p>Notre équipe est à votre disposition pour répondre à toutes vos questions concernant JobMatch+ et vous accompagner dans votre recherche d'emploi ou de candidats.</p>
+<!-- =========================
+     BANDEAU COOKIES
+========================= -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-description">
+  <div class="cookie-content">
+    <h2 id="cookie-title">🍪 Gestion des cookies</h2>
+    <p id="cookie-description">
+      JobMatch utilise des cookies pour améliorer votre expérience, mesurer l'audience
+      et personnaliser les offres d'emploi. Vous pouvez modifier vos préférences à tout moment.
+    </p>
+    <div class="cookie-buttons">
+      <button id="accept-all" type="button">Tout accepter</button>
+      <button id="reject-all" type="button">Tout refuser</button>
+      <button id="customize" type="button">Personnaliser mes choix</button>
+    </div>
+    <div class="cookie-info">
+      <p>📜 <strong>Votre choix sera conservé pendant 6 mois.</strong><br>
+        <a href="https://www.cnil.fr/fr/cookies-et-traceurs-regles-a-respecter" target="_blank" rel="noopener noreferrer">
+          En savoir plus sur les cookies (source CNIL)
+        </a>
+      </p>
+      <button id="delete-cookies">Supprimer mes cookies</button>
+    </div>
+  </div>
 
-        <div class="contact-grid">
-            <!-- Informations de contact -->
-            <div class="contact-info">
-                <h2>🏢 Nos coordonnées</h2>
-                
-                <div class="contact-item">
-                    <div class="icon">📧</div>
-                    <div>
-                        <strong>Email général</strong><br>
-                        <a href="mailto:contact@jobmatch.fr">contact@jobmatch.fr</a>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="icon">📞</div>
-                    <div>
-                        <strong>Téléphone</strong><br>
-                        05 56 XX XX XX<br>
-                        <small>Lun-Ven : 9h-18h</small>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="icon">🏢</div>
-                    <div>
-                        <strong>Adresse postale</strong><br>
-                        JobMatch+<br>
-                        123 Avenue de Bordeaux<br>
-                        33000 Bordeaux, France
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="icon">🔐</div>
-                    <div>
-                        <strong>Protection des données</strong><br>
-                        <a href="mailto:responsable@jobmatch.fr">responsable@jobmatch.fr</a><br>
-                        <small>Responsable - Questions RGPD</small>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="icon">🛠️</div>
-                    <div>
-                        <strong>Support technique</strong><br>
-                        <a href="mailto:support@jobmatch.fr">support@jobmatch.fr</a><br>
-                        <small>Aide technique et bugs</small>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="icon">💼</div>
-                    <div>
-                        <strong>Partenariats</strong><br>
-                        <a href="mailto:partenaires@jobmatch.fr">partenaires@jobmatch.fr</a><br>
-                        <small>Collaboration entreprises</small>
-                    </div>
-                </div>
+  <div id="cookie-settings" class="cookie-settings" aria-labelledby="settings-title">
+    <h3 id="settings-title">⚙️ Paramétrer mes choix de cookies</h3>
+    <form id="cookiePreferencesForm" novalidate>
+      <div class="cookie-preference-item">
+        <label>
+          <input type="checkbox" name="essential" checked disabled>
+          <div class="cookie-preference-label">
+            <div class="cookie-preference-title">Cookies essentiels</div>
+            <div class="cookie-preference-desc">
+              Nécessaires au fonctionnement du site. Ces cookies ne peuvent pas être désactivés.
             </div>
-
-            <!-- Formulaire de contact -->
-            <div class="contact-form">
-                <h2>✉️ Nous écrire</h2>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="contact-type">Type de demande *</label>
-                        <select id="contact-type" name="contact-type" required>
-                            <option value="">Sélectionnez</option>
-                            <option value="general">Question générale</option>
-                            <option value="technical">Support technique</option>
-                            <option value="account">Problème de compte</option>
-                            <option value="privacy">Protection des données</option>
-                            <option value="partnership">Partenariat</option>
-                            <option value="feedback">Suggestion/Amélioration</option>
-                            <option value="complaint">Réclamation</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contact-name">Nom complet *</label>
-                        <input type="text" id="contact-name" name="contact-name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contact-email">Email *</label>
-                        <input type="email" id="contact-email" name="contact-email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contact-phone">Téléphone (optionnel)</label>
-                        <input type="tel" id="contact-phone" name="contact-phone">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contact-subject">Sujet *</label>
-                        <input type="text" id="contact-subject" name="contact-subject" required placeholder="Résumé de votre demande">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contact-message">Message *</label>
-                        <textarea id="contact-message" name="contact-message" required placeholder="Décrivez votre demande en détail..."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" id="contact-privacy" name="contact-privacy" required>
-                            J'accepte que mes données soient traitées pour répondre à ma demande. 
-                            <a href="privacy.html" target="_blank">Politique de confidentialité</a>
-                        </label>
-                    </div>
-
-                    <button type="submit" class="btn-submit">📤 Envoyer le message</button>
-                </form>
+          </div>
+        </label>
+      </div>
+      <div class="cookie-preference-item">
+        <label>
+          <input type="checkbox" name="analytics" checked>
+          <div class="cookie-preference-label">
+            <div class="cookie-preference-title">Mesure d'audience</div>
+            <div class="cookie-preference-desc">
+              Nous permettent de mesurer l'audience et améliorer notre service.
             </div>
-        </div>
-
-        <!-- FAQ -->
-        <div class="faq-section">
-            <h2>❓ Questions fréquentes</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    Comment créer mon compte JobMatch+ ?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Cliquez sur "Inscription" dans le menu, remplissez le formulaire avec vos informations de base (nom, email, mot de passe) et choisissez votre profil (candidat ou recruteur). Vous recevrez un email de confirmation.
-                </div>
+          </div>
+        </label>
+      </div>
+      <div class="cookie-preference-item">
+        <label>
+          <input type="checkbox" name="personalization">
+          <div class="cookie-preference-label">
+            <div class="cookie-preference-title">Personnalisation</div>
+            <div class="cookie-preference-desc">
+              Adaptation du contenu et des offres selon vos préférences.
             </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    Comment fonctionne le matching automatique ?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Notre algorithme analyse votre profil (compétences, expérience, localisation, préférences) et le compare avec les offres d'emploi ou les profils de candidats pour proposer les meilleures correspondances.
-                </div>
+          </div>
+        </label>
+      </div>
+      <div class="cookie-preference-item">
+        <label>
+          <input type="checkbox" name="ads">
+          <div class="cookie-preference-label">
+            <div class="cookie-preference-title">Publicité ciblée</div>
+            <div class="cookie-preference-desc">
+              Publicités basées sur vos centres d'intérêts.
             </div>
+          </div>
+        </label>
+      </div>
+      <div class="cookie-settings-buttons">
+        <button type="submit">Enregistrer mes choix</button>
+        <button type="button" id="back">Retour</button>
+      </div>
+    </form>
+  </div>
+</div>
 
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    Mes données sont-elles sécurisées ?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Oui, nous appliquons le RGPD et utilisons des mesures de sécurité avancées : chiffrement SSL, hachage des mots de passe, serveurs sécurisés en France/UE. Vous pouvez exercer vos droits à tout moment depuis votre espace personnel.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    Comment supprimer mon compte ?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Rendez-vous dans <a href="data-management.html">"Gérer mes données"</a> depuis votre profil. Vous pouvez désactiver temporairement ou supprimer définitivement votre compte. La suppression est irréversible.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    Quel est le délai de réponse pour mes demandes ?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <ul>
-                        <li>Support technique : 24-48h</li>
-                        <li>Questions générales : 2-5 jours ouvrés</li>
-                        <li>Demandes RGPD : 30 jours maximum (généralement 5 jours)</li>
-                        <li>Urgences : sous 24h</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin: 40px 0; padding: 20px; background: #e7f3ff; border-radius: 8px;">
-            <h3>🕒 Horaires d'ouverture</h3>
-            <p><strong>Lundi - Vendredi :</strong> 9h00 - 18h00<br>
-            <strong>Weekend :</strong> Fermé<br>
-            <small>Support par email disponible 24h/7j - Réponse sous 24-48h</small></p>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 JobMatch+. Tous droits réservés.</p>
-        <div class="footer-links">
-            <a href="legal.html">Mentions légales</a>
-            <a href="privacy.html">Politique de confidentialité</a>
-            <a href="data-management.html">Gérer mes données</a>
-        </div>
-    </footer>
-
-    <script src="../js/script.js"></script>
-    <script src="../js/loadCookies.js"></script>
-    <script>
-        // Gestion du formulaire de contact
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const contactType = formData.get('contact-type');
-            const name = formData.get('contact-name');
-            const email = formData.get('contact-email');
-            const subject = formData.get('contact-subject');
-            
-            // Simulation d'envoi
-            alert(`Merci ${name} ! Votre message "${subject}" a été envoyé. Nous vous répondrons à ${email} dans les meilleurs délais.`);
-            
-            // Reset form
-            this.reset();
-        });
-
-        // Gestion de la FAQ
-        function toggleFaq(element) {
-            const answer = element.nextElementSibling;
-            const icon = element.querySelector('span');
-            
-            if (answer.classList.contains('active')) {
-                answer.classList.remove('active');
-                icon.textContent = '+';
-            } else {
-                // Ferme toutes les autres réponses
-                document.querySelectorAll('.faq-answer.active').forEach(item => {
-                    item.classList.remove('active');
-                });
-                document.querySelectorAll('.faq-question span').forEach(span => {
-                    span.textContent = '+';
-                });
-                
-                // Ouvre la réponse cliquée
-                answer.classList.add('active');
-                icon.textContent = '-';
-            }
-        }
-    </script>
+<script src="cookie.js"></script>
 </body>
 </html>
