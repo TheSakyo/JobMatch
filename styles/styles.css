@@ -1111,3 +1111,126 @@ body:has(.data-management-section) footer {
     font-size: 14px;
     color: #666;
 }
+
+/* Styles pour la page Newsletter */
+.newsletter-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-container h1 {
+    text-align: center;
+    color: #2c5aa0;
+}
+
+.newsletter-container .intro-text {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.email-demo {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.email-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.email-header .email-info {
+    font-size: 14px;
+    color: #333;
+}
+
+.email-header .email-actions button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.email-header .email-actions button:hover {
+    background-color: #0056b3;
+}
+
+.email-content {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.job-offers {
+    margin-top: 20px;
+}
+
+.job-offer {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fefefe;
+}
+
+.job-offer .job-header h5 {
+    margin: 0;
+    color: #2c5aa0;
+}
+
+.job-offer .job-company {
+    font-size: 14px;
+    color: #666;
+}
+
+.job-offer .job-details span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.job-offer .job-summary {
+    margin: 10px 0;
+    color: #555;
+}
+
+.job-offer .job-actions a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.job-offer .btn-email {
+    background-color: #007BFF;
+    color: white;
+}
+
+.job-offer .btn-email:hover {
+    background-color: #0056b3;
+}
+
+.job-offer .btn-email-secondary {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.job-offer .btn-email-secondary:hover {
+    background-color: #ddd;
+}
