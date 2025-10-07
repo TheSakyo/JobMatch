@@ -1,0 +1,59 @@
+/* -------- PRIVACY POLICY PAGE -------- */
+
+.privacy-content {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    line-height: 1.6;
+}
+
+.privacy-content h1 {
+    color: #004aad;
+    margin-bottom: 30px;
+}
+
+.privacy-content h2 {
+    color: #004aad;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.privacy-content h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-box {
+    background: #f0f4ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #004aad;
+    color: white;
+}
+
+.rights-list {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
