@@ -270,43 +270,85 @@ section h2 {
 }
 
 /* Steps section */
+#how-it-works {
+  background: linear-gradient(135deg, #f8f9ff 0%, var(--primary-light) 100%);
+  position: relative;
+}
+
+#how-it-works::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23004aad" opacity="0.02"><circle cx="100" cy="20" r="3"/><circle cx="200" cy="60" r="2"/><circle cx="300" cy="40" r="4"/><circle cx="400" cy="80" r="2"/><circle cx="500" cy="10" r="3"/><circle cx="600" cy="50" r="3"/><circle cx="700" cy="30" r="2"/><circle cx="800" cy="70" r="4"/><circle cx="900" cy="90" r="2"/></svg>');
+  pointer-events: none;
+}
+
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--spacing-xl);
   margin: var(--spacing-xxl) 0;
+  position: relative;
+  z-index: 1;
 }
 
 .step {
   text-align: center;
-  padding: var(--spacing-xl);
-  background-color: var(--background-white);
+  padding: var(--spacing-xxl) var(--spacing-lg);
+  background: linear-gradient(145deg, var(--background-white) 0%, #fafbff 100%);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 8px 32px rgba(0, 74, 173, 0.08);
   transition: all var(--transition-base);
+  border: 1px solid rgba(0, 74, 173, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
 
 .step:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 74, 173, 0.15);
+  border-color: rgba(0, 74, 173, 0.2);
 }
 
 .step img {
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   margin-bottom: var(--spacing-lg);
-  filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(1614%) hue-rotate(211deg) brightness(94%) contrast(101%);
+  filter: none;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border-radius: 50%;
+  padding: 16px;
+  transition: all var(--transition-base);
+}
+
+.step:hover img {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .step h3 {
   font-size: var(--font-xl);
   margin-bottom: var(--spacing-md);
   color: var(--primary-color);
+  font-weight: 700;
 }
 
 .step p {
   color: var(--text-secondary);
   line-height: 1.6;
+  font-size: var(--font-lg);
 }
 
 /* Offers section */
