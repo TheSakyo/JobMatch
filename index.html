@@ -1,38 +1,107 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JobMatch</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobMatch+</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <h1>👩‍💼 JobMatch</h1>
-    <div id="job-card-container">
-      <div id="loading">Chargement des offres...</div>
-    </div>
-    <div class="buttons">
-      <button id="no-btn" class="btn no">❌ Non merci</button>
-      <button id="info-btn" class="btn info">🔍 En savoir plus</button>
-      <button id="yes-btn" class="btn yes">💚 Je postule</button>
-    </div>
-  </div>
+    <!-- Header -->
+    <header>
+        <div class="logo">JobMatch+</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#how-it-works">Comment ça marche</a></li>
+                <li><a href="#login">Connexion / Inscription</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Fenêtre modale -->
-  <div id="modal" class="modal hidden">
-    <div class="modal-content">
-      <span id="close-modal" class="close">&times;</span>
-      <h2 id="modal-title"></h2>
-      <p id="modal-company"></p>
-      <p id="modal-type"></p>
-      <p id="modal-location"></p>
-      <p id="modal-salary"></p>
-      <p id="modal-description"></p>
-      <div id="modal-tags"></div>
-    </div>
-  </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Trouvez le bon candidat ou l’entreprise idéale en quelques clics.</h1>
+        <p>Pour les candidats : Soumettez votre CV et soyez automatiquement mis en relation avec des recruteurs pertinents.</p>
+        <p>Pour les recruteurs : Découvrez les candidats les plus qualifiés pour vos offres, planifiez vos entretiens facilement.</p>
+        <div class="cta-buttons">
+            <button onclick="location.href='#signup'">Créer mon compte</button>
+            <button onclick="location.href='#candidates'">Découvrir les candidats</button>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- How it works -->
+    <section id="how-it-works">
+        <h2>Comment ça marche</h2>
+        <div class="steps">
+            <div class="step">
+                <img src="icons/signup.svg" alt="Inscription">
+                <h3>Inscription</h3>
+                <p>Créez votre profil.</p>
+            </div>
+            <div class="step">
+                <img src="icons/cv.svg" alt="CV / Offres">
+                <h3>Soumission de CV / publication d’offres</h3>
+                <p>Ajoutez vos informations essentielles.</p>
+            </div>
+            <div class="step">
+                <img src="icons/match.svg" alt="Matching">
+                <h3>Matching automatique</h3>
+                <p>Notre algorithme propose les meilleures correspondances.</p>
+            </div>
+            <div class="step">
+                <img src="icons/schedule.svg" alt="Entretien">
+                <h3>Planification des entretiens</h3>
+                <p>Prenez rendez-vous directement depuis l’application.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What we offer -->
+    <section id="services">
+        <h2>Ce que nous proposons</h2>
+        <div class="offers">
+            <div class="candidates">
+                <h3>Pour les candidats</h3>
+                <ul>
+                    <li>Matching automatique avec les offres et recruteurs</li>
+                    <li>Gestion centralisée du CV et des candidatures</li>
+                    <li>Notifications et rappels personnalisés</li>
+                </ul>
+            </div>
+            <div class="recruiters">
+                <h3>Pour les recruteurs</h3>
+                <ul>
+                    <li>Accès à des profils pertinents selon vos besoins</li>
+                    <li>Planification simple des entretiens</li>
+                    <li>Statistiques anonymisées sur les candidats et événements</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- GDPR Section -->
+    <section id="gdpr">
+        <h2>Sécurité & RGPD</h2>
+        <p>Vos données sont sécurisées et utilisées uniquement pour faciliter le recrutement. Vous pouvez exercer vos droits à tout moment.</p>
+        <div class="gdpr-links">
+            <a href="#privacy">Politique de confidentialité</a>
+            <a href="#legal">Mentions légales</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 JobMatch+. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="#legal">Mentions légales</a>
+            <a href="#privacy">Politique de confidentialité</a>
+            <a href="#cookies">Gestion des cookies</a>
+            <a href="#contact">Support</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
