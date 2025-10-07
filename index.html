@@ -3,16 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JobMatch</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <meta name="description" content="JobMatch+ - Plateforme de recrutement intelligente pour candidats et recruteurs. Trouvez votre emploi idéal ou le candidat parfait grâce à notre algorithme de matching avancé.">
+    <meta name="keywords" content="emploi, recrutement, candidat, recruteur, CV, offre emploi, matching, Bordeaux">
+    <meta name="author" content="JobMatch+">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JobMatch+ - Recrutement Intelligent">
+    <meta property="og:description" content="Trouvez le bon candidat ou l'entreprise idéale en quelques clics.">
+    <meta property="og:site_name" content="JobMatch+">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="JobMatch+ - Recrutement Intelligent">
+    <meta property="twitter:description" content="Trouvez le bon candidat ou l'entreprise idéale en quelques clics.">
+    
+    <title>JobMatch+ - Recrutement Intelligent | Candidats & Recruteurs</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles/styles.css" as="style">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "JobMatch+",
+      "description": "Plateforme de recrutement intelligente",
+      "url": "https://jobmatch.fr",
+      "sameAs": [
+        "https://www.linkedin.com/company/jobmatch"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33-5-56-XX-XX-XX",
+        "contactType": "Customer Service",
+        "email": "contact@jobmatch.fr"
+      }
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">Aller au contenu principal</a>
+    
     <!-- Header -->
-    <header>
-        <div class="logo">JobMatch+</div>
-        <nav> 
+    <header role="banner">
+        <div class="logo" aria-label="JobMatch Plus - Accueil">
+            <a href="#home" aria-label="Retour à l'accueil">JobMatch+</a>
+        </div>
+        <nav role="navigation" aria-label="Navigation principale">
             <ul>
-                <li><a href="#home">Accueil</a></li>
+                <li><a href="#home" aria-current="page">Accueil</a></li>
                 <li><a href="#how-it-works">Comment ça marche</a></li>
                 <li><a href="./pages/signup.html">Connexion / Inscription</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -20,104 +68,162 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Trouvez le bon candidat ou l’entreprise idéale en quelques clics.</h1>
-        <p>Pour les candidats : Soumettez votre CV et soyez automatiquement mis en relation avec des recruteurs pertinents.</p>
-        <p>Pour les recruteurs : Découvrez les candidats les plus qualifiés pour vos offres, planifiez vos entretiens facilement.</p>
-        <div class="cta-buttons">
-            <button onclick="location.href='pages/signup.html'">Créer mon compte</button>
-            <button onclick="location.href='#services'">Découvrir les candidats</button>
-        </div>
-    </section>
+    <!-- Main content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <h1 id="hero-title" class="fade-in-up">Trouvez le bon candidat ou l'entreprise idéale en quelques clics</h1>
+                <p class="fade-in-up">Pour les candidats : Soumettez votre CV et soyez automatiquement mis en relation avec des recruteurs pertinents.</p>
+                <p class="fade-in-up">Pour les recruteurs : Découvrez les candidats les plus qualifiés pour vos offres, planifiez vos entretiens facilement.</p>
+                <div class="cta-buttons fade-in-up">
+                    <a href="pages/signup.html" class="btn btn-primary" role="button">
+                        Créer mon compte
+                    </a>
+                    <a href="#services" class="btn btn-secondary" role="button">
+                        Découvrir nos services
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <!-- How it works -->
-    <section id="how-it-works">
-        <h2>Comment ça marche</h2>
-        <div class="steps">
-            <div class="step">
-                <img src="icons/signup.svg" alt="Inscription">
-                <h3>Inscription</h3>
-                <p>Créez votre profil.</p>
+        <!-- How it works -->
+        <section id="how-it-works" aria-labelledby="how-it-works-title">
+            <div class="container">
+                <h2 id="how-it-works-title">Comment ça marche</h2>
+                <div class="steps">
+                    <div class="step card fade-in-up">
+                        <img src="icons/signup.svg" alt="" role="presentation" loading="lazy">
+                        <h3>Inscription</h3>
+                        <p>Créez votre profil en quelques minutes.</p>
+                    </div>
+                    <div class="step card fade-in-up">
+                        <img src="icons/cv.svg" alt="" role="presentation" loading="lazy">
+                        <h3>Soumission de CV / Publication d'offres</h3>
+                        <p>Ajoutez vos informations essentielles pour un matching optimal.</p>
+                    </div>
+                    <div class="step card fade-in-up">
+                        <img src="icons/match.svg" alt="" role="presentation" loading="lazy">
+                        <h3>Matching automatique</h3>
+                        <p>Notre algorithme IA propose les meilleures correspondances.</p>
+                    </div>
+                    <div class="step card fade-in-up">
+                        <img src="icons/schedule.svg" alt="" role="presentation" loading="lazy">
+                        <h3>Planification des entretiens</h3>
+                        <p>Prenez rendez-vous directement depuis l'application.</p>
+                    </div>
+                </div>
             </div>
-            <div class="step">
-                <img src="icons/cv.svg" alt="CV / Offres">
-                <h3>Soumission de CV / publication d’offres</h3>
-                <p>Ajoutez vos informations essentielles.</p>
-            </div>
-            <div class="step">
-                <img src="icons/match.svg" alt="Matching">
-                <h3>Matching automatique</h3>
-                <p>Notre algorithme propose les meilleures correspondances.</p>
-            </div>
-            <div class="step">
-                <img src="icons/schedule.svg" alt="Entretien">
-                <h3>Planification des entretiens</h3>
-                <p>Prenez rendez-vous directement depuis l’application.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- What we offer -->
-    <section id="services">
-        <h2>Ce que nous proposons</h2>
-        <div class="offers">
-            <div class="candidates">
-                <h3>Pour les candidats</h3>
-                <ul>
-                    <li>Matching automatique avec les offres et recruteurs</li>
-                    <li>Gestion centralisée du CV et des candidatures</li>
-                    <li>Notifications et rappels personnalisés</li>
-                </ul>
+        <!-- What we offer -->
+        <section id="services" aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title">Ce que nous proposons</h2>
+                <div class="offers">
+                    <div class="candidates card fade-in-up">
+                        <h3>Pour les candidats</h3>
+                        <ul>
+                            <li>Matching automatique avec les offres et recruteurs</li>
+                            <li>Gestion centralisée du CV et des candidatures</li>
+                            <li>Notifications et rappels personnalisés</li>
+                            <li>Suivi en temps réel de vos candidatures</li>
+                        </ul>
+                    </div>
+                    <div class="recruiters card fade-in-up">
+                        <h3>Pour les recruteurs</h3>
+                        <ul>
+                            <li>Accès à des profils pertinents selon vos besoins</li>
+                            <li>Planification simple des entretiens</li>
+                            <li>Statistiques anonymisées sur les candidats</li>
+                            <li>Tableaux de bord analytiques avancés</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="recruiters">
-                <h3>Pour les recruteurs</h3>
-                <ul>
-                    <li>Accès à des profils pertinents selon vos besoins</li>
-                    <li>Planification simple des entretiens</li>
-                    <li>Statistiques anonymisées sur les candidats et événements</li>
-                </ul>
+        </section>
+
+        <!-- GDPR Section -->
+        <section id="gdpr" aria-labelledby="gdpr-title">
+            <div class="container">
+                <h2 id="gdpr-title">Sécurité & RGPD</h2>
+                <p>Vos données sont sécurisées et utilisées uniquement pour faciliter le recrutement. Vous pouvez exercer vos droits à tout moment.</p>
+                <div class="gdpr-links">
+                    <a href="pages/privacy.html" class="fade-in-up">Politique de confidentialité</a>
+                    <a href="pages/legal.html" class="fade-in-up">Mentions légales</a>
+                    <a href="pages/data-management.html" class="fade-in-up">Gérer mes données</a>
+                </div>
+                <div class="security-icons fade-in-up" role="img" aria-label="Sécurité garantie">
+                    <span role="img" aria-label="Données chiffrées">🔒</span> 
+                    <span role="img" aria-label="Protection des données">🛡️</span> 
+                    <span role="img" aria-label="Support disponible">📞</span>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- GDPR Section -->
-    <section id="gdpr">
-        <h2>Sécurité & RGPD</h2>
-        <p>Vos données sont sécurisées et utilisées uniquement pour faciliter le recrutement. Vous pouvez exercer vos droits à tout moment.</p>
-        <div class="gdpr-links">
-            <a href="pages/privacy.html">Politique de confidentialité</a>
-            <a href="pages/legal.html">Mentions légales</a>
-            <a href="pages/data-management.html">Gérer mes données</a>
-        </div>
-        <div class="security-icons">
-            <span>🔒</span> <span>🛡️</span> <span>📞</span>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contactez-nous</h2>
-        <div class="contact-info">
-            <p>📧 Email : contact@jobmatch.fr</p>
-            <p>📞 Téléphone : 05 56 XX XX XX</p>
-            <p>🏢 Adresse : Bordeaux, France</p>
-            <p>🔐 DPO : dpo@jobmatch.fr</p>
-        </div>
-    </section>
+        <!-- Contact Section -->
+        <section id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title">Contactez-nous</h2>
+                <div class="contact-info">
+                    <p class="fade-in-up">
+                        <span role="img" aria-label="Email">📧</span>
+                        Email : <a href="mailto:contact@jobmatch.fr">contact@jobmatch.fr</a>
+                    </p>
+                    <p class="fade-in-up">
+                        <span role="img" aria-label="Téléphone">📞</span>
+                        Téléphone : <a href="tel:+33556000000">05 56 XX XX XX</a>
+                    </p>
+                    <p class="fade-in-up">
+                        <span role="img" aria-label="Adresse">🏢</span>
+                        Adresse : Bordeaux, France
+                    </p>
+                    <p class="fade-in-up">
+                        <span role="img" aria-label="DPO">🔐</span>
+                        DPO : <a href="mailto:dpo@jobmatch.fr">dpo@jobmatch.fr</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 JobMatch+. Tous droits réservés.</p>
-        <div class="footer-links">
-            <a href="pages/legal.html">Mentions légales</a>
-            <a href="pages/privacy.html">Politique de confidentialité</a>
-            <a href="javascript:void(0)" onclick="showCookieSettings()">Gestion des cookies</a>
-            <a href="pages/contact.html">Support</a>
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 JobMatch+. Tous droits réservés.</p>
+            <nav class="footer-links" role="navigation" aria-label="Liens du pied de page">
+                <a href="pages/legal.html">Mentions légales</a>
+                <a href="pages/privacy.html">Politique de confidentialité</a>
+                <a href="javascript:void(0)" onclick="showCookieSettings()" aria-describedby="cookie-help">
+                    Gestion des cookies
+                </a>
+                <a href="pages/contact.html">Support</a>
+            </nav>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/loadCookies.js"></script>
+    <!-- Hidden descriptive text for accessibility -->
+    <div id="cookie-help" class="sr-only">
+        Ouvrir les paramètres de gestion des cookies pour personnaliser vos préférences
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
+    <script src="js/loadCookies.js" defer></script>
+    
+    <!-- Service worker for progressive web app features (optional) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>

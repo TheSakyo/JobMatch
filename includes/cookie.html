@@ -1,46 +1,130 @@
-<!-- Bandeau cookies -->
-<div id="cookie-banner" class="cookie-banner">
+<!-- Bandeau cookies moderne avec accessibilité améliorée -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-description">
   <div class="cookie-content">
-    <h2>🍪 Gestion des cookies</h2>
-    <p>
-      JobMatch+ utilise des cookies pour améliorer votre expérience, mesurer l’audience
-      et personnaliser les offres d’emploi. Vous pouvez modifier vos préférences à tout moment.
+    <h2 id="cookie-title">🍪 Gestion des cookies</h2>
+    <p id="cookie-description">
+      JobMatch+ utilise des cookies pour améliorer votre expérience, mesurer l'audience
+      et personnaliser les offres d'emploi. Vous pouvez modifier vos préférences à tout moment.
     </p>
 
     <div class="cookie-buttons">
-      <button id="accept-all">Tout accepter</button>
-      <button id="reject-all">Tout refuser</button>
-      <button id="customize">Personnaliser mes choix</button>
+      <button id="accept-all" type="button" aria-describedby="accept-all-desc">
+        Tout accepter
+      </button>
+      <button id="reject-all" type="button" aria-describedby="reject-all-desc">
+        Tout refuser
+      </button>
+      <button id="customize" type="button" aria-describedby="customize-desc">
+        Personnaliser mes choix
+      </button>
     </div>
 
-    <p class="cookie-info">
-      📜 Votre choix sera conservé pendant 6 mois.<br>
-      <a href="https://www.cnil.fr/fr/cookies-et-traceurs-regles-a-respecter" target="_blank">
-        En savoir plus sur les cookies (source CNIL)
-      </a>
-    </p>
+    <div class="cookie-info">
+      <p>
+        📜 <strong>Votre choix sera conservé pendant 6 mois.</strong><br>
+        <a href="https://www.cnil.fr/fr/cookies-et-traceurs-regles-a-respecter" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           aria-label="En savoir plus sur les cookies - Ouvre dans un nouvel onglet">
+          En savoir plus sur les cookies (source CNIL)
+        </a>
+      </p>
+    </div>
+
+    <!-- Descriptions cachées pour l'accessibilité -->
+    <div class="sr-only">
+      <div id="accept-all-desc">Accepter tous les cookies incluant l'analyse, la personnalisation et la publicité</div>
+      <div id="reject-all-desc">Refuser tous les cookies optionnels, garder seulement les cookies essentiels</div>
+      <div id="customize-desc">Ouvrir les paramètres détaillés pour choisir quels cookies accepter</div>
+    </div>
   </div>
 
-  <!-- Fenêtre de personnalisation -->
-  <div id="cookie-settings" class="cookie-settings hidden">
-    <h3>⚙️ Paramétrer mes choix</h3>
-    <form id="cookiePreferencesForm">
-      <label>
-        <input type="checkbox" name="analytics" checked>
-        Mesure d’audience
-      </label>
-      <label>
-        <input type="checkbox" name="personalization">
-        Personnalisation des offres
-      </label>
-      <label>
-        <input type="checkbox" name="ads">
-        Publicité ciblée
-      </label>
+  <!-- Fenêtre de personnalisation améliorée -->
+  <div id="cookie-settings" class="cookie-settings hidden" aria-labelledby="settings-title">
+    <h3 id="settings-title">⚙️ Paramétrer mes choix de cookies</h3>
+    
+    <form id="cookiePreferencesForm" novalidate>
+      <!-- Cookies essentiels (toujours actifs) -->
+      <div class="cookie-preference-item">
+        <label>
+          <input type="checkbox" name="essential" checked disabled aria-describedby="essential-desc">
+          <div class="cookie-preference-label">
+            <div class="cookie-preference-title">Cookies essentiels</div>
+            <div class="cookie-preference-desc" id="essential-desc">
+              Nécessaires au fonctionnement du site. Ces cookies ne peuvent pas être désactivés.
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <!-- Cookies analytiques -->
+      <div class="cookie-preference-item">
+        <label>
+          <input type="checkbox" name="analytics" checked aria-describedby="analytics-desc">
+          <div class="cookie-preference-label">
+            <div class="cookie-preference-title">Mesure d'audience</div>
+            <div class="cookie-preference-desc" id="analytics-desc">
+              Nous permettent de mesurer l'audience, les statistiques de fréquentation et d'utilisation afin d'améliorer notre service.
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <!-- Cookies de personnalisation -->
+      <div class="cookie-preference-item">
+        <label>
+          <input type="checkbox" name="personalization" aria-describedby="personalization-desc">
+          <div class="cookie-preference-label">
+            <div class="cookie-preference-title">Personnalisation</div>
+            <div class="cookie-preference-desc" id="personalization-desc">
+              Permettent d'adapter le contenu et les offres d'emploi selon vos préférences et votre profil.
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <!-- Cookies publicitaires -->
+      <div class="cookie-preference-item">
+        <label>
+          <input type="checkbox" name="ads" aria-describedby="ads-desc">
+          <div class="cookie-preference-label">
+            <div class="cookie-preference-title">Publicité ciblée</div>
+            <div class="cookie-preference-desc" id="ads-desc">
+              Utilisés pour vous proposer des publicités pertinentes basées sur vos centres d'intérêts.
+            </div>
+          </div>
+        </label>
+      </div>
+
       <div class="cookie-settings-buttons">
-        <button type="submit">Enregistrer mes choix</button>
-        <button type="button" id="back">Retour</button>
+        <button type="submit" aria-describedby="save-desc">
+          Enregistrer mes choix
+        </button>
+        <button type="button" id="back" aria-describedby="back-desc">
+          Retour
+        </button>
+      </div>
+
+      <!-- Descriptions cachées pour l'accessibilité -->
+      <div class="sr-only">
+        <div id="save-desc">Sauvegarder vos préférences de cookies et fermer ce panneau</div>
+        <div id="back-desc">Revenir à l'écran principal sans sauvegarder</div>
       </div>
     </form>
   </div>
 </div>
+
+<!-- Classe sr-only pour l'accessibilité -->
+<style>
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
