@@ -11,81 +11,8 @@
 <!-- =========================
      BANDEAU COOKIES
 ========================= -->
-<div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-description">
-  <div class="cookie-content">
-    <h2 id="cookie-title">🍪 Gestion des cookies</h2>
-    <p id="cookie-description">
-      JobMatch utilise des cookies pour améliorer votre expérience, mesurer l'audience
-      et personnaliser les offres d'emploi. Vous pouvez modifier vos préférences à tout moment.
-    </p>
-    <div class="cookie-buttons">
-      <button id="accept-all" type="button">Tout accepter</button>
-      <button id="reject-all" type="button">Tout refuser</button>
-      <button id="customize" type="button">Personnaliser mes choix</button>
-    </div>
-    <div class="cookie-info">
-      <p>📜 <strong>Votre choix sera conservé pendant 6 mois.</strong><br>
-        <a href="https://www.cnil.fr/fr/cookies-et-traceurs-regles-a-respecter" target="_blank" rel="noopener noreferrer">
-          En savoir plus sur les cookies (source CNIL)
-        </a>
-      </p>
-      <button id="delete-cookies">Supprimer mes cookies</button>
-    </div>
-  </div>
-
-  <div id="cookie-settings" class="cookie-settings" aria-labelledby="settings-title">
-    <h3 id="settings-title">⚙️ Paramétrer mes choix de cookies</h3>
-    <form id="cookiePreferencesForm" novalidate>
-      <div class="cookie-preference-item">
-        <label>
-          <input type="checkbox" name="essential" checked disabled>
-          <div class="cookie-preference-label">
-            <div class="cookie-preference-title">Cookies essentiels</div>
-            <div class="cookie-preference-desc">
-              Nécessaires au fonctionnement du site. Ces cookies ne peuvent pas être désactivés.
-            </div>
-          </div>
-        </label>
-      </div>
-      <div class="cookie-preference-item">
-        <label>
-          <input type="checkbox" name="analytics" checked>
-          <div class="cookie-preference-label">
-            <div class="cookie-preference-title">Mesure d'audience</div>
-            <div class="cookie-preference-desc">
-              Nous permettent de mesurer l'audience et améliorer notre service.
-            </div>
-          </div>
-        </label>
-      </div>
-      <div class="cookie-preference-item">
-        <label>
-          <input type="checkbox" name="personalization">
-          <div class="cookie-preference-label">
-            <div class="cookie-preference-title">Personnalisation</div>
-            <div class="cookie-preference-desc">
-              Adaptation du contenu et des offres selon vos préférences.
-            </div>
-          </div>
-        </label>
-      </div>
-      <div class="cookie-preference-item">
-        <label>
-          <input type="checkbox" name="ads">
-          <div class="cookie-preference-label">
-            <div class="cookie-preference-title">Publicité ciblée</div>
-            <div class="cookie-preference-desc">
-              Publicités basées sur vos centres d'intérêts.
-            </div>
-          </div>
-        </label>
-      </div>
-      <div class="cookie-settings-buttons">
-        <button type="submit">Enregistrer mes choix</button>
-        <button type="button" id="back">Retour</button>
-      </div>
-    </form>
-  </div>
+<div id="cookie-banner-container">
+  <!--#include virtual="../includes/cookie.html" -->
 </div>
 
 <script src="cookie.js"></script>

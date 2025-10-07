@@ -54,6 +54,7 @@ class CookieManager {
         document.addEventListener('keydown', this.handleKeyDown);
 
         this.showBanner();
+        this.setupEventListeners();
     }
 
     addClickListener(id, handler) {
@@ -145,6 +146,15 @@ class CookieManager {
         document.body.appendChild(toast);
         setTimeout(()=>{ toast.style.opacity='1'; toast.style.transform='translateX(0)'; },100);
         setTimeout(()=>{ toast.style.opacity='0'; toast.style.transform='translateX(100%)'; setTimeout(()=>{ toast.remove(); },300); },3000);
+    }
+
+    setupEventListeners() {
+        // Ajout d'un écouteur global pour tous les boutons afin de masquer le popup.
+        document.addEventListener('click', (event) => {
+            if (event.target.tagName === 'BUTTON') {
+                this.hideBanner();
+            }
+        });
     }
 }
 
