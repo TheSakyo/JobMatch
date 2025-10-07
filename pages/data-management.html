@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion des données - JobMatch+</title>
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/data-management.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">JobMatch+</div>
+        <div class="logo">
+            <img src="../images/logo.png" alt="JobMatch Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
@@ -133,13 +134,13 @@
             </div>
         </div>
 
-        <!-- Contact DPO -->
-        <div class="contact-dpo">
+        <!-- Contact responsable -->
+        <div class="contact-responsable">
             <h2>🔐 Contactez notre Délégué à la Protection des Données</h2>
             <p>Pour toute question ou demande spécifique concernant vos données personnelles :</p>
             <div class="action-buttons" style="justify-content: center;">
-                <a href="mailto:dpo@jobmatch.fr" class="btn-action btn-primary">
-                    📧 dpo@jobmatch.fr
+                <a href="mailto:responsable@jobmatch.fr" class="btn-action btn-primary">
+                    📧 responsable@jobmatch.fr
                 </a>
                 <button class="btn-action btn-secondary" onclick="openContactForm()">
                     📝 Formulaire de contact
@@ -153,7 +154,7 @@
             <h3>📞 Réclamations</h3>
             <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez :</p>
             <ul>
-                <li>Nous contacter directement : <a href="mailto:dpo@jobmatch.fr">dpo@jobmatch.fr</a></li>
+                <li>Nous contacter directement : <a href="mailto:responsable@jobmatch.fr">responsable@jobmatch.fr</a></li>
                 <li>Saisir la CNIL : <a href="https://www.cnil.fr/fr/plaintes" target="_blank">www.cnil.fr/fr/plaintes</a></li>
             </ul>
         </div>
@@ -163,8 +164,8 @@
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeContactModal()">&times;</span>
-            <h2>📝 Contacter le DPO</h2>
-            <form id="dpoContactForm">
+            <h2>📝 Contacter le responsable</h2>
+            <form id="responsableContactForm">
                 <div class="form-group">
                     <label for="request-type">Type de demande :</label>
                     <select id="request-type" name="request-type" required>
@@ -211,13 +212,13 @@
         }
 
         function showDataDetails() {
-            alert('Fonctionnalité en cours de développement. Contactez le DPO pour plus de détails.');
+            alert('Fonctionnalité en cours de développement. Contactez le responsable pour plus de détails.');
         }
 
         function requestCorrection() {
             const error = prompt('Décrivez l\\'erreur à corriger :');
             if (error) {
-                alert('Votre demande de correction a été transmise au DPO. Réponse sous 5 jours ouvrés.');
+                alert('Votre demande de correction a été transmise au responsable. Réponse sous 5 jours ouvrés.');
             }
         }
 
@@ -273,10 +274,10 @@
             document.getElementById('contactModal').style.display = 'none';
         }
 
-        // Gestion du formulaire de contact DPO
-        document.getElementById('dpoContactForm').addEventListener('submit', function(e) {
+        // Gestion du formulaire de contact responsable
+        document.getElementById('responsableContactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Votre message a été envoyé au DPO. Réponse sous 5 jours ouvrés.');
+            alert('Votre message a été envoyé au responsable. Réponse sous 5 jours ouvrés.');
             closeContactModal();
             this.reset();
         });

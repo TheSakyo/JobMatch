@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Newsletter JobMatch+ - Alertes emploi et actualités recrutement">
+    <title>Newsletter - JobMatch+</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="JobMatch Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="profile.html">Mon profil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="newsletter.html" class="active" title="Newsletter">📧</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="newsletter-container">
+        <h1>📧 Newsletter JobMatch+</h1>
+        <p class="intro-text">Découvrez nos dernières alertes emploi et actualités du recrutement.</p>
+
+        <!-- Email de démonstration -->
+        <section class="email-demo">
+            <div class="email-wrapper">
+                <div class="email-header">
+                    <div class="email-info">
+                        <strong>De :</strong> JobMatch+ &lt;noreply@jobmatch.fr&gt;<br>
+                        <strong>À :</strong> john.doe@email.com<br>
+                        <strong>Sujet :</strong> 🎯 3 nouvelles offres correspondent à votre profil !<br>
+                        <strong>Date :</strong> 07 octobre 2025, 09:00
+                    </div>
+                    <div class="email-actions">
+                        <button onclick="toggleEmailView()" class="btn btn-secondary">
+                            📱 Basculer vue mobile
+                        </button>
+                    </div>
+                </div>
+
+                <div class="email-content" id="email-content">
+                    <!-- En-tête de l'email -->
+                    <div class="email-banner">
+                        <h2 style="color: #2c5aa0; margin: 0;">JobMatch+</h2>
+                        <p style="color: #666; margin: 5px 0;">Votre plateforme de recrutement intelligent</p>
+                    </div>
+
+                    <!-- Contenu principal -->
+                    <div class="email-body">
+                        <h3>Bonjour John 👋</h3>
+                        
+                        <p>Excellente nouvelle ! Nous avons trouvé <strong>3 nouvelles offres d'emploi</strong> qui correspondent parfaitement à votre profil de <em>Développeur Full Stack</em>.</p>
+
+                        <!-- Offres d'emploi -->
+                        <div class="job-offers">
+                            <h4>🎯 Offres sélectionnées pour vous :</h4>
+                            
+                            <div class="job-offer">
+                                <div class="job-header">
+                                    <h5>Développeur Full Stack React/Node.js</h5>
+                                    <div class="job-company">TechStart - Bordeaux</div>
+                                </div>
+                                <div class="job-details">
+                                    <span class="job-salary">45-55k€</span>
+                                    <span class="job-type">CDI</span>
+                                    <span class="job-remote">Télétravail partiel</span>
+                                </div>
+                                <p class="job-summary">Rejoignez une startup innovante dans le domaine de la FinTech. Stack moderne, équipe dynamique, croissance rapide.</p>
+                                <div class="job-actions">
+                                    <a href="#" class="btn-email">🔍 Voir l'offre</a>
+                                    <a href="#" class="btn-email-secondary">❤️ Sauvegarder</a>
+                                </div>
+                            </div>
+
+                            <div class="job-offer">
+                                <div class="job-header">
+                                    <h5>Lead Developer JavaScript</h5>
+                                    <div class="job-company">Digital Agency - Paris</div>
+                                </div>
+                                <div class="job-details">
+                                    <span class="job-salary">55-65k€</span>
+                                    <span class="job-type">CDI</span>
+                                    <span class="job-remote">100% Remote</span>
+                                </div>
+                                <p class="job-summary">Encadrer une équipe de 4 développeurs dans une agence web réputée. Projets variés pour grands comptes.</p>
+                                <div class="job-actions">
+                                    <a href="#" class="btn-email">🔍 Voir l'offre</a>
+                                    <a href="#" class="btn-email-secondary">❤️ Sauvegarder</a>
+                                </div>
+                            </div>
+
+                            <div class="job-offer">
+                                <div class="job-header">
+                                    <h5>Développeur Full Stack Senior</h5>
+                                    <div class="job-company">Scale-up SaaS - Lyon</div>
+                                </div>
+                                <div class="job-details">
+                                    <span class="job-salary">50-60k€</span>
+                                    <span class="job-type">CDI</span>
+                                    <span class="job-remote">Hybride</span>
+                                </div>
+                                <p class="job-summary">Contribuer à la croissance d'un produit SaaS B2B utilisé par 10 000+ entreprises. Impact direct sur le produit.</p>
+                                <div class="job-actions">
+                                    <a href="#" class="btn-email">🔍 Voir l'offre</a>
+                                    <a href="#" class="btn-email-secondary">❤️ Sauvegarder</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Statistiques -->
+                        <div class="stats-section">
+                            <h4>📊 Vos statistiques cette semaine :</h4>
+                            <div class="stats-grid">
+                                <div class="stat">
+                                    <div class="stat-number">127</div>
+                                    <div class="stat-label">Vues de profil</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-number">23</div>
+                                    <div class="stat-label">Entreprises intéressées</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-number">8</div>
+                                    <div class="stat-label">Messages reçus</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Conseils -->
+                        <div class="tips-section">
+                            <h4>💡 Conseil de la semaine :</h4>
+                            <div class="tip-card">
+                                <p><strong>Optimisez votre profil :</strong> Les profils avec une photo professionnelle reçoivent 3x plus de vues. Ajoutez la vôtre dès maintenant !</p>
+                                <a href="#" class="btn-email">📸 Ajouter une photo</a>
+                            </div>
+                        </div>
+
+                        <!-- Call-to-action -->
+                        <div class="cta-section">
+                            <h4>🚀 Passez au niveau supérieur :</h4>
+                            <p>Avec JobMatch+ Premium, votre profil est mis en avant auprès des recruteurs et vous accédez à des statistiques détaillées.</p>
+                            <a href="premium.html" class="btn-email-primary">✨ Découvrir Premium</a>
+                        </div>
+                    </div>
+
+                    <!-- Pied de page de l'email -->
+                    <div class="email-footer">
+                        <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
+                        
+                        <div style="font-size: 12px; color: #666; line-height: 1.5;">
+                            <p><strong>JobMatch+</strong> - Votre plateforme de recrutement intelligent</p>
+                            <p>📍 123 Avenue de Bordeaux, 33000 Bordeaux, France</p>
+                            <p>📧 contact@jobmatch.fr | 📞 05 56 XX XX XX</p>
+                            
+                            <div style="margin: 15px 0;">
+                                <a href="#" style="color: #2c5aa0; text-decoration: none; margin-right: 15px;">🏠 Accueil</a>
+                                <a href="#" style="color: #2c5aa0; text-decoration: none; margin-right: 15px;">👤 Mon profil</a>
+                                <a href="#" style="color: #2c5aa0; text-decoration: none; margin-right: 15px;">⚙️ Paramètres</a>
+                            </div>
+                            
+                            <p style="margin-top: 20px;">
+                                Vous recevez cet email car vous êtes abonné à nos alertes emploi.<br>
+                                <a href="#" style="color: #666;">Se désinscrire</a> | 
+                                <a href="#" style="color: #666;">Gérer mes préférences</a> | 
+                                <a href="privacy.html" style="color: #666;">Politique de confidentialité</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Actions utilisateur -->
+        <section class="newsletter-actions">
+            <h2>📬 Gérer votre newsletter</h2>
+            
+            <div class="actions-grid">
+                <div class="action-card">
+                    <h3>⚙️ Préférences d'alerte</h3>
+                    <p>Personnalisez vos critères de recherche et la fréquence de réception des emails.</p>
+                    <button class="btn btn-primary" onclick="showPreferences()">
+                        Modifier mes préférences
+                    </button>
+                </div>
+                
+                <div class="action-card">
+                    <h3>📊 Statistiques</h3>
+                    <p>Consultez vos performances et l'évolution de votre visibilité sur la plateforme.</p>
+                    <button class="btn btn-secondary" onclick="showStats()">
+                        Voir mes statistiques
+                    </button>
+                </div>
+                
+                <div class="action-card">
+                    <h3>🔕 Désinscription</h3>
+                    <p>Vous pouvez vous désinscrire des emails à tout moment, tout en gardant votre compte actif.</p>
+                    <button class="btn btn-warning" onclick="unsubscribeNewsletter()">
+                        Me désinscrire
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Archive des newsletters -->
+        <section class="newsletter-archive">
+            <h2>📚 Newsletters précédentes</h2>
+            
+            <div class="archive-list">
+                <div class="archive-item">
+                    <div class="archive-date">30 septembre 2025</div>
+                    <div class="archive-subject">🎯 5 nouvelles offres + Conseils entretien</div>
+                    <button class="btn btn-link" onclick="viewArchive(1)">Consulter</button>
+                </div>
+                
+                <div class="archive-item">
+                    <div class="archive-date">23 septembre 2025</div>
+                    <div class="archive-subject">💼 Votre profil intéresse 12 recruteurs</div>
+                    <button class="btn btn-link" onclick="viewArchive(2)">Consulter</button>
+                </div>
+                
+                <div class="archive-item">
+                    <div class="archive-date">16 septembre 2025</div>
+                    <div class="archive-subject">🚀 Tendances du marché tech en septembre</div>
+                    <button class="btn btn-link" onclick="viewArchive(3)">Consulter</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 JobMatch+. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="legal.html">Mentions légales</a>
+            <a href="privacy.html">Politique de confidentialité</a>
+            <a href="data-management.html">Gérer mes données</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/loadCookies.js"></script>
+    <script>
+        // Newsletter specific functions.
+        
+        function toggleEmailView() {
+            const emailContent = document.getElementById('email-content');
+            emailContent.classList.toggle('mobile-view');
+            
+            const button = event.target;
+            if (emailContent.classList.contains('mobile-view')) {
+                button.textContent = '🖥️ Basculer vue desktop';
+            } else {
+                button.textContent = '📱 Basculer vue mobile';
+            }
+        }
+        
+        function showPreferences() {
+            alert('🔧 Préférences de newsletter\n\n' +
+                  '• Fréquence : Hebdomadaire\n' +
+                  '• Types d\'offres : Développement web\n' +
+                  '• Localisation : Bordeaux + Remote\n' +
+                  '• Salaire minimum : 40k€\n\n' +
+                  'Modification disponible depuis votre profil.');
+        }
+        
+        function showStats() {
+            alert('📊 Vos statistiques newsletter\n\n' +
+                  '• Emails reçus ce mois : 4\n' +
+                  '• Taux d\'ouverture : 85%\n' +
+                  '• Offres consultées : 12\n' +
+                  '• Candidatures envoyées : 3\n' +
+                  '• Réponses reçues : 1\n\n' +
+                  'Statistiques complètes dans votre profil Premium.');
+        }
+        
+        function unsubscribeNewsletter() {
+            if (confirm('Êtes-vous sûr de vouloir vous désinscrire de la newsletter ?\n\nVous ne recevrez plus d\'alertes emploi par email.')) {
+                alert('✅ Vous avez été désinscrit de la newsletter.\n\nVotre compte JobMatch+ reste actif. Vous pouvez vous réinscrire à tout moment depuis vos paramètres.');
+            }
+        }
+        
+        function viewArchive(id) {
+            const archives = {
+                1: 'Newsletter du 30/09 : 5 offres développeur + guide entretien technique',
+                2: 'Newsletter du 23/09 : 12 recruteurs consultent votre profil régulièrement',
+                3: 'Newsletter du 16/09 : Analyse du marché tech - salaires en hausse de 8%'
+            };
+            
+            alert('📧 ' + (archives[id] || 'Newsletter archivée') + '\n\nConsultation complète disponible dans votre espace membre.');
+        }
+    </script>
+</body>
+</html>

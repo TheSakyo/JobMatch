@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abonnement Premium JobMatch+ - Fonctionnalités avancées pour candidats et recruteurs">
+    <title>Abonnement Premium - JobMatch+</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="JobMatch Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="profile.html">Mon profil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="newsletter.html" title="Newsletter">📧</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="premium-container">
+        <h1>✨ Abonnement Premium JobMatch+</h1>
+        <p class="intro-text">Accédez à des fonctionnalités avancées et boostez votre présence sur notre plateforme.</p>
+
+        <!-- Plans d'abonnement -->
+        <section class="pricing-section">
+            <h2>🎯 Choisissez votre plan</h2>
+            
+            <div class="pricing-grid">
+                <!-- Plan Candidat Premium -->
+                <div class="pricing-card" data-plan="candidat">
+                    <div class="plan-header">
+                        <h3>👤 Candidat Premium</h3>
+                        <div class="price">
+                            <span class="amount">9,99€</span>
+                            <span class="period">/mois</span>
+                        </div>
+                        <div class="annual-price">ou 99€/an (économisez 2 mois)</div>
+                    </div>
+                    <ul class="features">
+                        <li>✅ Profil en tête des résultats de recherche</li>
+                        <li>✅ Statistiques détaillées de vos candidatures</li>
+                        <li>✅ Contact direct avec les recruteurs</li>
+                        <li>✅ Alertes emploi prioritaires</li>
+                        <li>✅ CV visible par plus de recruteurs</li>
+                        <li>✅ Support client prioritaire</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="selectPlan('candidat', 'monthly')">
+                        Choisir ce plan
+                    </button>
+                </div>
+
+                <!-- Plan Recruteur Premium -->
+                <div class="pricing-card featured" data-plan="recruteur">
+                    <div class="ribbon">⭐ Plus populaire</div>
+                    <div class="plan-header">
+                        <h3>🏢 Recruteur Premium</h3>
+                        <div class="price">
+                            <span class="amount">29,99€</span>
+                            <span class="period">/mois</span>
+                        </div>
+                        <div class="annual-price">ou 299€/an (économisez 2 mois)</div>
+                    </div>
+                    <ul class="features">
+                        <li>✅ Accès illimité aux profils candidats</li>
+                        <li>✅ Outils de recherche avancés</li>
+                        <li>✅ Tableaux de bord analytiques</li>
+                        <li>✅ Messages illimités aux candidats</li>
+                        <li>✅ Mise en avant de vos offres</li>
+                        <li>✅ Statistiques de performance détaillées</li>
+                        <li>✅ Support dédié et formation</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="selectPlan('recruteur', 'monthly')">
+                        Choisir ce plan
+                    </button>
+                </div>
+
+                <!-- Plan Entreprise -->
+                <div class="pricing-card" data-plan="entreprise">
+                    <div class="plan-header">
+                        <h3>🏭 Entreprise</h3>
+                        <div class="price">
+                            <span class="amount">Sur mesure</span>
+                        </div>
+                        <div class="annual-price">À partir de 5 utilisateurs</div>
+                    </div>
+                    <ul class="features">
+                        <li>✅ Toutes les fonctionnalités Recruteur</li>
+                        <li>✅ Comptes multiples</li>
+                        <li>✅ API d'intégration</li>
+                        <li>✅ Rapports personnalisés</li>
+                        <li>✅ Support 24/7</li>
+                        <li>✅ Formation équipe</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="contactSales()">
+                        Nous contacter
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulaire de paiement -->
+        <section class="payment-section">
+            <h2>💳 Souscrire à un abonnement</h2>
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Données d'identité</legend>
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="firstname">Prénom :</label>
+                    <input type="text" id="firstname" name="firstname" required>
+
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Données de facturation</legend>
+                    <label for="address">Adresse postale :</label>
+                    <input type="text" id="address" name="address" required>
+
+                    <label for="siret">Numéro SIRET (recruteurs) :</label>
+                    <input type="text" id="siret" name="siret">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Données bancaires</legend>
+                    <p>Le paiement est sécurisé via notre prestataire certifié PCI-DSS.</p>
+                    <label for="card">Numéro de carte bancaire :</label>
+                    <input type="text" id="card" name="card" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Offre choisie</legend>
+                    <label for="offer">Choisissez votre offre :</label>
+                    <select id="offer" name="offer">
+                        <option value="1mois">1 mois</option>
+                        <option value="6mois">6 mois</option>
+                        <option value="12mois">12 mois</option>
+                    </select>
+                </fieldset>
+
+                <button type="submit">Souscrire</button>
+            </form>
+        </section>
+
+        <!-- Mentions légales -->
+        <section class="legal-section">
+            <h2>📜 Mentions légales</h2>
+            <p>Les informations collectées lors de la souscription à un abonnement Premium sont nécessaires pour la gestion de votre contrat et de votre facturation. Vos données sont traitées par JobMatch et son prestataire de paiement agréé, uniquement pour ces finalités.</p>
+            <p>Base légale : exécution du contrat (article 6.1.b du RGPD).</p>
+            <p>Durée de conservation : 10 ans pour les factures (obligation comptable).</p>
+            <p>Contact DPO : <a href="mailto:dpo@jobmatch.fr">dpo@jobmatch.fr</a></p>
+            <p><a href="privacy.html">Politique de confidentialité</a></p>
+        </section>
+
+        <!-- Section avantages -->
+        <section class="benefits-section">
+            <h2>🚀 Pourquoi choisir Premium ?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Performance</h3>
+                    <p>Votre profil ou vos offres sont mis en avant et consultés en priorité.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Analyses détaillées</h3>
+                    <p>Accédez à des statistiques approfondies sur vos performances.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Matching intelligent</h3>
+                    <p>Algorithmes optimisés pour des correspondances encore plus précises.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💬</div>
+                    <h3>Contact direct</h3>
+                    <p>Échangez directement avec les candidats ou recruteurs sans intermédiaire.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Support prioritaire</h3>
+                    <p>Assistance dédiée et réponses rapides à toutes vos questions.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔄</div>
+                    <h3>Flexibilité</h3>
+                    <p>Résiliez ou modifiez votre abonnement à tout moment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2>❓ Questions fréquentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Puis-je annuler mon abonnement à tout moment ?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Oui, vous pouvez résilier votre abonnement à tout moment depuis votre espace "Mon profil". La résiliation prend effet à la fin de votre période de facturation en cours.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Mes données bancaires sont-elles sécurisées ?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Absolument. Nous ne stockons aucune donnée bancaire. Le paiement est traité par notre prestataire certifié PCI-DSS avec chiffrement SSL. Vos informations sont parfaitement protégées.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Y a-t-il une période d'essai ?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Nous proposons 14 jours de satisfaction garantie. Si vous n'êtes pas satisfait, contactez-nous pour un remboursement complet.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Comment puis-je consulter mes factures ?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Toutes vos factures sont disponibles dans votre espace "Mon profil" > "Facturation". Vous pouvez les télécharger au format PDF à tout moment.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 JobMatch+. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="legal.html">Mentions légales</a>
+            <a href="privacy.html">Politique de confidentialité</a>
+            <a href="data-management.html">Gérer mes données</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/premium.js"></script>
+    <script src="../js/loadCookies.js"></script>
+</body>
+</html>

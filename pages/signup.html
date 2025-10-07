@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JobMatch - Inscription</title>
-    <link rel="stylesheet" href="../styles/signup.css">
+    <meta name="description" content="Créez votre compte JobMatch+ - Inscription candidats et recruteurs">
+    <title>Inscription - JobMatch+</title>
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">JobMatch+</div>
+        <div class="logo">
+            <img src="../images/logo.png" alt="JobMatch Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="profile.html">Mon Profil</a></li>
+                <li><a href="newsletter.html"><img src="../assets/mail-icon.png" alt="Newsletter" title="Newsletter"></a></li>
             </ul>
         </nav>
     </header>
@@ -54,6 +59,14 @@
             </p>
 
             <button type="submit">Créer mon compte</button>
+            
+            <div class="form-separator">
+                <span>ou</span>
+            </div>
+            
+            <button type="button" class="btn btn-secondary" onclick="simulateLogin()">
+                🔑 Simuler une connexion (démo)
+            </button>
         </form>
     </main>
 

@@ -88,6 +88,11 @@ class CookieManager {
     
     // Keyboard navigation.
     document.addEventListener('keydown', this.handleKeyDown);
+    
+    // Ajout d'un écouteur global pour tous les boutons.
+    document.addEventListener('click', () => {
+      this.hideBanner();
+    });
   }
   
   /**
