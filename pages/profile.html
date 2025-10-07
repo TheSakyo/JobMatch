@@ -2,115 +2,194 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewpo    <!-- Informations légales et gestion des données -->
-    <div class="data-management-section">
-      <h3>🔐 Gestion de mes données</h3>
-      <p class="info-text">
-        <strong>Finalité :</strong> Ces données sont utilisées uniquement pour améliorer le matching avec les offres d'emploi 
-        et assurer le bon fonctionnement de votre profil JobMatch+.
-      </p>
-      <p class="info-text">
-        <strong>Vos droits :</strong> Accès, rectification, opposition, effacement et portabilité de vos données personnelles.
-      </p>
-      <div class="data-actions">
-        <a href="data-management.html" class="btn-data">📋 Gérer mes données personnelles</a>
-        <a href="privacy.html" target="_blank">📜 Politique de confidentialité</a>
-        <a href="mailto:dpo@jobmatch.fr">✉️ Contacter le DPO</a>
-      </div>
-    </div>ent="width=device-width, initial-scale=1.0">
-  <title>Profil - JobMatch+</title>
-  <link rel="stylesheet" href="../styles/profile.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gérez votre profil JobMatch+ - Informations professionnelles et préférences pour un matching optimal">
+  <title>Mon Profil - JobMatch+</title>
+  
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="sr-only">Aller au contenu principal</a>
+  
   <!-- Header -->
-  <header>
-    <div class="logo">JobMatch+</div>
-    <nav>
+  <header role="banner">
+    <div class="logo" aria-label="JobMatch Plus - Accueil">
+      <a href="../index.html" aria-label="Retour à l'accueil">JobMatch+</a>
+    </div>
+    <nav role="navigation" aria-label="Navigation principale">
       <ul>
         <li><a href="../index.html">Accueil</a></li>
         <li><a href="signup.html">Mon compte</a></li>
-        <li><a href="#profile">Profil</a></li>
+        <li><a href="#profile" aria-current="page">Profil</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Profil -->
-  <section id="profile" class="profile-section">
-    <h1>Mon profil</h1>
-    <p>Gérez vos informations professionnelles pour améliorer le matching avec les offres d’emploi.</p>
+  <!-- Main content -->
+  <main id="main-content">
+    <!-- Profil Section -->
+    <section id="profile" class="form-container">
+      <div class="container">
+        <h1>💼 Mon Profil Professionnel</h1>
+        <p>Gérez vos informations professionnelles pour améliorer le matching avec les offres d'emploi qui vous correspondent.</p>
 
-    <form id="profileForm">
-      <div class="form-group">
-        <label for="role">Rôle</label>
-        <select id="role" name="role" required>
-          <option value="">Sélectionner...</option>
-          <option value="candidat">Candidat</option>
-          <option value="recruteur">Recruteur</option>
-        </select>
+        <form id="profileForm" class="fade-in-up">
+          <div class="form-group">
+            <label for="role">Rôle *</label>
+            <select id="role" name="role" class="form-control" required>
+              <option value="">Sélectionner votre rôle...</option>
+              <option value="candidat">🎯 Candidat - Je cherche un emploi</option>
+              <option value="recruteur">💼 Recruteur - Je recrute des talents</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">Prénom *</label>
+              <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Votre prénom" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Nom *</label>
+              <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Votre nom" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="experiences">Expériences professionnelles</label>
+            <textarea id="experiences" name="experiences" class="form-control" rows="4" placeholder="Décrivez vos expériences principales, postes occupés, entreprises..."></textarea>
+            <small class="form-text">Ces informations nous aident à mieux comprendre votre parcours.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="skills">Compétences clés</label>
+            <input type="text" id="skills" name="skills" class="form-control" placeholder="Ex : JavaScript, Gestion de projet, Communication, Leadership">
+            <small class="form-text">Séparez vos compétences par des virgules.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="wishes">Souhaits professionnels</label>
+            <textarea id="wishes" name="wishes" class="form-control" rows="3" placeholder="Type de poste recherché, environnement de travail idéal, objectifs de carrière..."></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">Ville</label>
+              <input type="text" id="city" name="city" class="form-control" placeholder="Votre ville actuelle">
+            </div>
+            <div class="form-group">
+              <label for="mobility">Mobilité géographique</label>
+              <select id="mobility" name="mobility" class="form-control">
+                <option value="locale">🏠 Locale - Même ville</option>
+                <option value="regionale">🌆 Régionale - Même région</option>
+                <option value="nationale">🇫🇷 Nationale - Toute la France</option>
+                <option value="internationale">🌍 Internationale - À l'étranger</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            💾 Enregistrer mon profil
+          </button>
+        </form>
       </div>
+    </section>
 
-      <div class="form-group">
-        <label for="experiences">Expériences professionnelles</label>
-        <textarea id="experiences" name="experiences" rows="3" placeholder="Décrivez vos expériences..."></textarea>
-      </div>
+    <!-- Alertes Emploi Section -->
+    <section class="alerts-section">
+      <div class="container">
+        <div class="form-container">
+          <h2>🔔 Alertes Emploi Personnalisées</h2>
+          <p>Recevez automatiquement les offres qui correspondent à votre profil directement dans votre boîte mail.</p>
+          
+          <form id="alertsForm" class="fade-in-up">
+            <div class="form-group">
+              <label for="alertEmail">Adresse email pour les alertes *</label>
+              <input type="email" id="alertEmail" name="alertEmail" class="form-control" placeholder="votre.email@exemple.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="checkbox-container">
+                <input type="checkbox" id="consent" name="consent" required>
+                <span class="checkmark"></span>
+                Je souhaite recevoir les alertes emploi correspondant à mon profil et je comprends que je peux me désinscrire à tout moment.
+              </label>
+            </div>
 
-      <div class="form-group">
-        <label for="skills">Compétences</label>
-        <input type="text" id="skills" name="skills" placeholder="Ex : Java, PHP, Gestion d’équipe">
-      </div>
+            <button type="submit" class="btn btn-secondary">
+              ✉️ S'abonner aux alertes
+            </button>
+          </form>
 
-      <div class="form-group">
-        <label for="wishes">Souhaits professionnels</label>
-        <textarea id="wishes" name="wishes" rows="3" placeholder="Type de poste, environnement de travail..."></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="city">Ville</label>
-        <input type="text" id="city" name="city" placeholder="Votre ville actuelle">
-      </div>
-
-      <div class="form-group">
-        <label for="mobility">Mobilité</label>
-        <select id="mobility" name="mobility">
-          <option value="locale">Locale</option>
-          <option value="regionale">Régionale</option>
-          <option value="nationale">Nationale</option>
-          <option value="internationale">Internationale</option>
-        </select>
-      </div>
-
-      <button type="submit">Enregistrer mon profil</button>
-    </form>
-
-    <!-- Mini-formulaire Alertes Emploi -->
-    <div class="alerts-section">
-      <h2>Recevez des alertes emploi</h2>
-      <form id="alertsForm">
-        <div class="form-inline">
-          <input type="email" id="alertEmail" name="alertEmail" placeholder="Votre adresse email" required>
-          <label>
-            <input type="checkbox" id="consent" name="consent" required>
-            Je souhaite recevoir les alertes emploi correspondant à mon profil.
-          </label>
+          <div class="info-text mt-4">
+            <p><strong>Comment ça marche ?</strong></p>
+            <ul>
+              <li>Nous analysons votre profil et vos préférences</li>
+              <li>Nous vous envoyons uniquement les offres pertinentes</li>
+              <li>Fréquence : maximum 2-3 emails par semaine</li>
+              <li>Désinscription en un clic depuis chaque email</li>
+            </ul>
+          </div>
         </div>
-        <button type="submit" class="btn-alert">S’abonner</button>
-      </form>
+      </div>
+    </section>
 
-      <p class="alert-info">
-        Votre adresse email est utilisée uniquement pour vous envoyer des alertes emploi correspondant à votre profil. 
-        Vous pouvez vous désinscrire à tout moment via le lien présent dans chaque email.
-      </p>
-    </div>
+    <!-- Gestion des données RGPD -->
+    <section class="data-management-section">
+      <div class="container">
+        <div class="form-container">
+          <h2>🔐 Gestion de mes données personnelles</h2>
+          
+          <div class="info-text">
+            <p><strong>Finalité du traitement :</strong></p>
+            <p>Ces données sont utilisées uniquement pour :</p>
+            <ul>
+              <li>Améliorer le matching avec les offres d'emploi pertinentes</li>
+              <li>Assurer le bon fonctionnement de votre profil JobMatch+</li>
+              <li>Vous envoyer des alertes emploi (si vous y consentez)</li>
+              <li>Améliorer nos services de façon générale</li>
+            </ul>
+          </div>
 
-    <!-- Informations légales -->
-    <p class="info-text">
-      Les données collectées sont nécessaires à la gestion de votre profil JobMatch+. 
-      Elles sont traitées uniquement pour assurer le bon fonctionnement de la plateforme 
-      et le matching avec les offres d’emploi. Vous disposez d’un droit d’accès, de rectification, 
-      d’opposition et d’effacement de vos données personnelles. 
-      <a href="privacy.html" target="_blank">Politique de confidentialité</a>
-    </p>
-  </section>
+          <div class="info-text">
+            <p><strong>Vos droits RGPD :</strong></p>
+            <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+            <ul>
+              <li><strong>Accès :</strong> Consulter toutes vos données</li>
+              <li><strong>Rectification :</strong> Modifier vos informations</li>
+              <li><strong>Opposition :</strong> Refuser certains traitements</li>
+              <li><strong>Effacement :</strong> Supprimer votre compte et vos données</li>
+              <li><strong>Portabilité :</strong> Récupérer vos données</li>
+            </ul>
+          </div>
+
+          <div class="data-actions">
+            <a href="data-management.html" class="btn btn-primary">
+              📋 Gérer mes données
+            </a>
+            <a href="privacy.html" target="_blank" class="btn btn-secondary">
+              📜 Politique de confidentialité
+            </a>
+            <a href="mailto:dpo@jobmatch.fr" class="btn btn-secondary">
+              ✉️ Contacter le DPO
+            </a>
+          </div>
+
+          <div class="info-text mt-4">
+            <p><small>
+              <strong>Conservation des données :</strong> Vos données sont conservées pendant la durée de votre compte actif, 
+              puis supprimées automatiquement après 3 ans d'inactivité. Vous pouvez demander leur suppression immédiate à tout moment.
+            </small></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 JobMatch+. Tous droits réservés.</p>
