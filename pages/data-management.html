@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des données - JobMatch+</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .data-management {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .data-management h1 {
+            color: #004aad;
+            margin-bottom: 30px;
+        }
+        .data-section {
+            margin: 30px 0;
+            padding: 25px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        .data-section h2 {
+            color: #004aad;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .btn-action {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background-color: #004aad;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #003080;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background-color: #545b62;
+        }
+        .btn-warning {
+            background-color: #ffc107;
+            color: #212529;
+        }
+        .btn-warning:hover {
+            background-color: #e0a800;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+        .info-card {
+            background: #e7f3ff;
+            border-left: 4px solid #004aad;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .warning-card {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .success-card {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .data-summary {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #dee2e6;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-dpo {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">JobMatch+</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="profile.html">Mon profil</a></li>
+                <li><a href="privacy.html">Confidentialité</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="data-management">
+        <h1>🔐 Gestion de mes données personnelles</h1>
+        
+        <div class="info-card">
+            <p><strong>Conformément au RGPD</strong>, vous disposez de droits sur vos données personnelles. 
+            Cette page vous permet d'exercer ces droits simplement et en toute sécurité.</p>
+        </div>
+
+        <!-- Résumé des données -->
+        <div class="data-section">
+            <h2>📊 Résumé de mes données</h2>
+            <div class="data-summary">
+                <p><strong>Compte créé le :</strong> <span id="account-date">01/10/2025</span></p>
+                <p><strong>Dernière connexion :</strong> <span id="last-login">07/10/2025</span></p>
+                <p><strong>Type de compte :</strong> <span id="account-type">Candidat</span></p>
+                <p><strong>Données stockées :</strong></p>
+                <ul>
+                    <li>✅ Informations de profil (nom, email)</li>
+                    <li>✅ CV et expériences professionnelles</li>
+                    <li>✅ Préférences de recherche</li>
+                    <li>✅ Historique des candidatures</li>
+                    <li id="newsletter-status">❌ Newsletter (non abonné)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Droit d'accès -->
+        <div class="data-section">
+            <h2>📋 Droit d'accès à mes données</h2>
+            <p>Obtenez une copie complète de toutes vos données personnelles que nous détenons.</p>
+            <div class="action-buttons">
+                <button class="btn-action btn-primary" onclick="requestDataExport()">
+                    📥 Télécharger mes données
+                </button>
+                <button class="btn-action btn-secondary" onclick="showDataDetails()">
+                    👁️ Voir le détail de mes données
+                </button>
+            </div>
+            <div class="info-card">
+                <p><strong>Délai :</strong> Vous recevrez vos données par email sous 30 jours maximum (généralement sous 48h).</p>
+            </div>
+        </div>
+
+        <!-- Droit de rectification -->
+        <div class="data-section">
+            <h2>✏️ Droit de rectification</h2>
+            <p>Corrigez ou mettez à jour vos informations personnelles.</p>
+            <div class="action-buttons">
+                <a href="profile.html" class="btn-action btn-primary">
+                    ✏️ Modifier mon profil
+                </a>
+                <button class="btn-action btn-secondary" onclick="requestCorrection()">
+                    📝 Signaler une erreur
+                </button>
+            </div>
+        </div>
+
+        <!-- Droit à la portabilité -->
+        <div class="data-section">
+            <h2>📦 Droit à la portabilité</h2>
+            <p>Récupérez vos données dans un format structuré pour les transférer vers un autre service.</p>
+            <div class="action-buttons">
+                <button class="btn-action btn-primary" onclick="requestPortability('json')">
+                    📄 Format JSON
+                </button>
+                <button class="btn-action btn-primary" onclick="requestPortability('csv')">
+                    📊 Format CSV
+                </button>
+                <button class="btn-action btn-primary" onclick="requestPortability('pdf')">
+                    📋 Format PDF
+                </button>
+            </div>
+        </div>
+
+        <!-- Droit d'opposition -->
+        <div class="data-section">
+            <h2>🚫 Droit d'opposition</h2>
+            <p>Vous opposez à certains traitements de vos données personnelles.</p>
+            <div class="action-buttons">
+                <button class="btn-action btn-warning" onclick="manageConsents()">
+                    ⚙️ Gérer mes consentements
+                </button>
+                <button class="btn-action btn-warning" onclick="optOutMarketing()">
+                    📧 Me désinscrire des emails marketing
+                </button>
+                <button class="btn-action btn-warning" onclick="limitProcessing()">
+                    ⏸️ Limiter le traitement de mes données
+                </button>
+            </div>
+        </div>
+
+        <!-- Droit à l'effacement -->
+        <div class="data-section">
+            <h2>🗑️ Droit à l'effacement ("droit à l'oubli")</h2>
+            <div class="warning-card">
+                <p><strong>⚠️ Attention :</strong> Cette action est irréversible. Toutes vos données seront définitivement supprimées.</p>
+            </div>
+            <p>Supprimez définitivement votre compte et toutes vos données personnelles.</p>
+            <div class="action-buttons">
+                <button class="btn-action btn-secondary" onclick="requestAccountDeactivation()">
+                    ⏸️ Désactiver temporairement mon compte
+                </button>
+                <button class="btn-action btn-danger" onclick="requestAccountDeletion()">
+                    🗑️ Supprimer définitivement mon compte
+                </button>
+            </div>
+            <div class="info-card">
+                <p><strong>Exceptions :</strong> Certaines données peuvent être conservées pour des obligations légales 
+                (facturation : 10 ans, contentieux en cours, etc.).</p>
+            </div>
+        </div>
+
+        <!-- Contact DPO -->
+        <div class="contact-dpo">
+            <h2>🔐 Contactez notre Délégué à la Protection des Données</h2>
+            <p>Pour toute question ou demande spécifique concernant vos données personnelles :</p>
+            <div class="action-buttons" style="justify-content: center;">
+                <a href="mailto:dpo@jobmatch.fr" class="btn-action btn-primary">
+                    📧 dpo@jobmatch.fr
+                </a>
+                <button class="btn-action btn-secondary" onclick="openContactForm()">
+                    📝 Formulaire de contact
+                </button>
+            </div>
+            <p><small>Délai de réponse : 30 jours maximum (généralement sous 5 jours ouvrés)</small></p>
+        </div>
+
+        <!-- Information CNIL -->
+        <div class="info-card">
+            <h3>📞 Réclamations</h3>
+            <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez :</p>
+            <ul>
+                <li>Nous contacter directement : <a href="mailto:dpo@jobmatch.fr">dpo@jobmatch.fr</a></li>
+                <li>Saisir la CNIL : <a href="https://www.cnil.fr/fr/plaintes" target="_blank">www.cnil.fr/fr/plaintes</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Modal de contact -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactModal()">&times;</span>
+            <h2>📝 Contacter le DPO</h2>
+            <form id="dpoContactForm">
+                <div class="form-group">
+                    <label for="request-type">Type de demande :</label>
+                    <select id="request-type" name="request-type" required>
+                        <option value="">Sélectionnez</option>
+                        <option value="access">Droit d'accès</option>
+                        <option value="rectification">Droit de rectification</option>
+                        <option value="erasure">Droit à l'effacement</option>
+                        <option value="portability">Droit à la portabilité</option>
+                        <option value="opposition">Droit d'opposition</option>
+                        <option value="complaint">Réclamation</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" placeholder="Décrivez votre demande..." required></textarea>
+                </div>
+                <div class="action-buttons">
+                    <button type="submit" class="btn-action btn-primary">📤 Envoyer</button>
+                    <button type="button" class="btn-action btn-secondary" onclick="closeContactModal()">❌ Annuler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 JobMatch+. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="legal.html">Mentions légales</a>
+            <a href="privacy.html">Politique de confidentialité</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/loadCookies.js"></script>
+    <script>
+        // Fonctions pour la gestion des données
+        function requestDataExport() {
+            if (confirm('Voulez-vous recevoir une copie de toutes vos données par email ?')) {
+                alert('Votre demande a été enregistrée. Vous recevrez vos données par email sous 48h.');
+                // Ici, implémentation de la logique backend
+            }
+        }
+
+        function showDataDetails() {
+            alert('Fonctionnalité en cours de développement. Contactez le DPO pour plus de détails.');
+        }
+
+        function requestCorrection() {
+            const error = prompt('Décrivez l\\'erreur à corriger :');
+            if (error) {
+                alert('Votre demande de correction a été transmise au DPO. Réponse sous 5 jours ouvrés.');
+            }
+        }
+
+        function requestPortability(format) {
+            if (confirm(`Voulez-vous télécharger vos données au format ${format.toUpperCase()} ?`)) {
+                alert(`Préparation de vos données au format ${format.toUpperCase()}. Téléchargement dans quelques instants.`);
+                // Ici, logique de génération et téléchargement
+            }
+        }
+
+        function manageConsents() {
+            // Réutilise le système de cookies
+            if (typeof showCookieSettings === 'function') {
+                showCookieSettings();
+            } else {
+                alert('Panneau de gestion des consentements en cours de chargement...');
+            }
+        }
+
+        function optOutMarketing() {
+            if (confirm('Voulez-vous vous désinscrire de tous les emails marketing ?')) {
+                alert('Vous avez été désinscrit des emails marketing. Vous ne recevrez plus que les emails essentiels.');
+                document.getElementById('newsletter-status').innerHTML = '❌ Newsletter (désinscrit)';
+            }
+        }
+
+        function limitProcessing() {
+            if (confirm('Voulez-vous limiter le traitement de vos données au strict minimum ?')) {
+                alert('Le traitement de vos données a été limité. Seules les fonctionnalités essentielles restent actives.');
+            }
+        }
+
+        function requestAccountDeactivation() {
+            if (confirm('Voulez-vous désactiver temporairement votre compte ? (réactivable à tout moment)')) {
+                alert('Votre compte sera désactivé sous 24h. Vous pourrez le réactiver en vous reconnectant.');
+            }
+        }
+
+        function requestAccountDeletion() {
+            const confirmation = prompt('Pour confirmer la suppression définitive, tapez "SUPPRIMER" :');
+            if (confirmation === 'SUPPRIMER') {
+                if (confirm('DERNIÈRE CONFIRMATION : Cette action est irréversible. Continuer ?')) {
+                    alert('Votre demande de suppression a été enregistrée. Votre compte sera supprimé sous 30 jours. Vous pouvez annuler cette demande en nous contactant.');
+                }
+            }
+        }
+
+        function openContactForm() {
+            document.getElementById('contactModal').style.display = 'block';
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+
+        // Gestion du formulaire de contact DPO
+        document.getElementById('dpoContactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Votre message a été envoyé au DPO. Réponse sous 5 jours ouvrés.');
+            closeContactModal();
+            this.reset();
+        });
+
+        // Fermeture de la modal en cliquant en dehors
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                closeContactModal();
+            }
+        }
+    </script>
+</body>
+</html>
