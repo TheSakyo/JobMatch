@@ -1,6 +1,5 @@
 // loadCookies.js
 // This script dynamically loads the cookie banner HTML into every page
-
 document.addEventListener("DOMContentLoaded", () => {
   fetch("../includes/cookies.html") // Chemin selon ta structure (adapter si besoin)
     .then(response => response.text())
