@@ -1,0 +1,39 @@
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 2px solid #0078d4;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  font-size: 0.95rem;
+  z-index: 1000;
+}
+
+.cookie-content h2 {
+  margin-top: 0;
+}
+
+.cookie-buttons button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #0078d4;
+  color: white;
+  transition: background 0.2s;
+}
+
+.cookie-buttons button:hover {
+  background: #005fa3;
+}
+
+.cookie-settings {
+  margin-top: 10px;
+}
+
+.cookie-settings.hidden {
+  display: none;
+}

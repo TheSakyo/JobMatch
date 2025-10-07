@@ -1,0 +1,46 @@
+<!-- Bandeau cookies -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-content">
+    <h2>🍪 Gestion des cookies</h2>
+    <p>
+      JobMatch+ utilise des cookies pour améliorer votre expérience, mesurer l’audience
+      et personnaliser les offres d’emploi. Vous pouvez modifier vos préférences à tout moment.
+    </p>
+
+    <div class="cookie-buttons">
+      <button id="accept-all">Tout accepter</button>
+      <button id="reject-all">Tout refuser</button>
+      <button id="customize">Personnaliser mes choix</button>
+    </div>
+
+    <p class="cookie-info">
+      📜 Votre choix sera conservé pendant 6 mois.<br>
+      <a href="https://www.cnil.fr/fr/cookies-et-traceurs-regles-a-respecter" target="_blank">
+        En savoir plus sur les cookies (source CNIL)
+      </a>
+    </p>
+  </div>
+
+  <!-- Fenêtre de personnalisation -->
+  <div id="cookie-settings" class="cookie-settings hidden">
+    <h3>⚙️ Paramétrer mes choix</h3>
+    <form id="cookiePreferencesForm">
+      <label>
+        <input type="checkbox" name="analytics" checked>
+        Mesure d’audience
+      </label>
+      <label>
+        <input type="checkbox" name="personalization">
+        Personnalisation des offres
+      </label>
+      <label>
+        <input type="checkbox" name="ads">
+        Publicité ciblée
+      </label>
+      <div class="cookie-settings-buttons">
+        <button type="submit">Enregistrer mes choix</button>
+        <button type="button" id="back">Retour</button>
+      </div>
+    </form>
+  </div>
+</div>
