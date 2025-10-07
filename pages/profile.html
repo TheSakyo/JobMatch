@@ -9,7 +9,7 @@
 <body>
   <!-- Header -->
   <header>
-    <div class="logo">JobMatch+</div>
+    <div class="logo">JobMatch</div>
     <nav>
       <ul>
         <li><a href="../index.html">Accueil</a></li>
@@ -66,6 +66,26 @@
 
       <button type="submit">Enregistrer mon profil</button>
     </form>
+
+    <!-- Mini-formulaire Alertes Emploi -->
+    <div class="alerts-section">
+      <h2>Recevez des alertes emploi</h2>
+      <form id="alertsForm">
+        <div class="form-inline">
+          <input type="email" id="alertEmail" name="alertEmail" placeholder="Votre adresse email" required>
+          <label>
+            <input type="checkbox" id="consent" name="consent" required>
+            Je souhaite recevoir les alertes emploi correspondant à mon profil.
+          </label>
+        </div>
+        <button type="submit" class="btn-alert">S’abonner</button>
+      </form>
+
+      <p class="alert-info">
+        Votre adresse email est utilisée uniquement pour vous envoyer des alertes emploi correspondant à votre profil. 
+        Vous pouvez vous désinscrire à tout moment via le lien présent dans chaque email.
+      </p>
+    </div>
 
     <!-- Informations légales -->
     <p class="info-text">
