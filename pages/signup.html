@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobMatch - Inscription</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">JobMatch</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Signup Form -->
+    <main class="signup-container">
+        <h1>Créer un compte JobMatch</h1>
+        <form id="signup-form">
+            <!-- User Type -->
+            <label for="user-type">Je suis :</label>
+            <select id="user-type" name="user-type" required>
+                <option value="">Sélectionnez votre profil</option>
+                <option value="candidat">Candidat</option>
+                <option value="recruteur">Recruteur</option>
+            </select>
+
+            <!-- Personal Info -->
+            <label for="first-name">Prénom</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Nom</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Password -->
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" required
+                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                   title="8 caractères minimum, avec majuscule, minuscule et chiffre">
+
+            <p class="info-text">
+                Les données collectées sont nécessaires à la création de votre compte JobMatch. 
+                Elles sont traitées par JobMatch pour assurer votre accès à la plateforme et la gestion de votre profil. 
+                Vous disposez d’un droit d’accès, de rectification, d’opposition et d’effacement. 
+                <a href="privacy.html" target="_blank">Politique de confidentialité</a>
+            </p>
+
+            <button type="submit">Créer mon compte</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 JobMatch+. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/signup.js"></script>
+</body>
+</html>

@@ -135,3 +135,62 @@ footer .footer-links a {
     color: white;
     text-decoration: none;
 }
+.signup-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.signup-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004aad;
+}
+
+.signup-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-container label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.signup-container input,
+.signup-container select {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.signup-container button {
+    margin-top: 25px;
+    padding: 12px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #004aad;
+    color: white;
+    cursor: pointer;
+}
+
+.signup-container button:hover {
+    background-color: #003080;
+}
+
+.info-text {
+    font-size: 0.85em;
+    color: #555;
+    margin-top: 15px;
+}
+
+.info-text a {
+    color: #004aad;
+    text-decoration: underline;
+}
