@@ -89,9 +89,11 @@ class CookieManager {
     // Keyboard navigation.
     document.addEventListener('keydown', this.handleKeyDown);
     
-    // Ajout d'un écouteur global pour tous les boutons.
-    document.addEventListener('click', () => {
-      this.hideBanner();
+    // Ajout d'un écouteur global pour tous les boutons afin de masquer le popup.
+    document.addEventListener('click', (event) => {
+      if (event.target.tagName === 'BUTTON') {
+        this.hideBanner();
+      }
     });
   }
   
@@ -480,31 +482,21 @@ class CookieManager {
   getPreferences() {
     try {
       const stored = localStorage.getItem(this.STORAGE_KEY);
-      if (stored) {
-        const data = JSON.parse(stored);
-        return data.prefs || null;
-      }
+      if (!stored) return null;
+      
+      const data = JSON.parse(stored);
+      return data.prefs || null;
+      
     } catch (error) {
-      console.warn('Error getting preferences:', error);
+      console.error('Error retrieving preferences:', error);
+      return null;
     }
-    return null;
   }
 }
 
-// Initialize cookie manager when DOM is loaded.
-let cookieManager = null;
-
+/**
+ * Initialize CookieManager on DOMContentLoaded.
+ */
 document.addEventListener('DOMContentLoaded', () => {
-  cookieManager = new CookieManager();
-  
-  // Make methods globally available.
-  window.showCookieSettings = () => {
-    if (cookieManager) {
-      cookieManager.showCookieSettings();
-    }
-  };
-  
-  window.getCookiePreferences = () => {
-    return cookieManager ? cookieManager.getPreferences() : null;
-  };
+  window.cookieManager = new CookieManager();
 });
