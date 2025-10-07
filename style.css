@@ -194,3 +194,45 @@ footer .footer-links a {
     color: #004aad;
     text-decoration: underline;
 }
+.profile-section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #4b7bec;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3867d6;
+}
+
+.rgpd-info {
+  background-color: #f4f6f8;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
