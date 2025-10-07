@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobMatch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>👩‍💼 JobMatch</h1>
+    <div id="job-card-container">
+      <div id="loading">Chargement des offres...</div>
+    </div>
+    <div class="buttons">
+      <button id="no-btn" class="btn no">❌ Non merci</button>
+      <button id="info-btn" class="btn info">🔍 En savoir plus</button>
+      <button id="yes-btn" class="btn yes">💚 Je postule</button>
+    </div>
+  </div>
+
+  <!-- Fenêtre modale -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-company"></p>
+      <p id="modal-type"></p>
+      <p id="modal-location"></p>
+      <p id="modal-salary"></p>
+      <p id="modal-description"></p>
+      <div id="modal-tags"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

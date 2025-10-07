@@ -1,0 +1,122 @@
+    [
+  {
+    "id": 1,
+    "title": "Serveur(se) en restaurant",
+    "company": "Le Bistrot Gourmand",
+    "location": "Bordeaux, France",
+    "type": "CDD - 6 mois",
+    "salary": "1 900 € / mois",
+    "compatibility": 87,
+    "tags": ["Service", "Restauration", "Relation client"],
+    "description": "Accueillir les clients, prendre les commandes et assurer le service en salle dans un cadre convivial.",
+    "image": "images/serveur.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Assistant administratif",
+    "company": "Mairie de Talence",
+    "location": "Talence, France",
+    "type": "CDI",
+    "salary": "2 100 € / mois",
+    "compatibility": 92,
+    "tags": ["Administration", "Organisation", "Gestion"],
+    "description": "Gestion des courriers, suivi des dossiers et assistance administrative auprès du secrétariat général.",
+    "image": "images/admin.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Vendeur(se) prêt-à-porter",
+    "company": "H&M",
+    "location": "Mérignac, France",
+    "type": "CDD - 3 mois",
+    "salary": "1 850 € / mois",
+    "compatibility": 79,
+    "tags": ["Commerce", "Mode", "Relation client"],
+    "description": "Conseiller les clients, gérer la mise en rayon et encaisser les ventes dans une ambiance dynamique.",
+    "image": "images/vendeur.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Agent de nettoyage industriel",
+    "company": "ProClean Services",
+    "location": "Bordeaux, France",
+    "type": "CDI",
+    "salary": "1 780 € / mois",
+    "compatibility": 83,
+    "tags": ["Entretien", "Hygiène", "Maintenance"],
+    "description": "Nettoyage et désinfection de sites industriels, respect strict des normes de sécurité et d’hygiène.",
+    "image": "images/nettoyage.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Chargé(e) de communication",
+    "company": "Nexa Digital School",
+    "location": "Bordeaux, France",
+    "type": "Stage - 4 mois",
+    "salary": "Gratification légale",
+    "compatibility": 88,
+    "tags": ["Communication", "Réseaux sociaux", "Créativité"],
+    "description": "Conception de contenus visuels, animation des réseaux sociaux et participation à la stratégie de communication.",
+    "image": "images/communication.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Technicien(ne) de maintenance",
+    "company": "SNCF Réseau",
+    "location": "Pessac, France",
+    "type": "CDI",
+    "salary": "2 350 € / mois",
+    "compatibility": 81,
+    "tags": ["Technique", "Mécanique", "Sécurité"],
+    "description": "Assurer la maintenance préventive et corrective des installations ferroviaires sur le secteur de Bordeaux.",
+    "image": "images/maintenance.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Éducateur(trice) spécialisé(e)",
+    "company": "Association Les Ailes",
+    "location": "Bègles, France",
+    "type": "CDI",
+    "salary": "2 200 € / mois",
+    "compatibility": 90,
+    "tags": ["Social", "Accompagnement", "Éducation"],
+    "description": "Accompagner des jeunes en difficulté, élaborer des projets éducatifs personnalisés et travailler avec les familles.",
+    "image": "images/educateur.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Employé(e) de rayon",
+    "company": "Carrefour Market",
+    "location": "Eysines, France",
+    "type": "CDD - 2 mois",
+    "salary": "1 750 € / mois",
+    "compatibility": 77,
+    "tags": ["Commerce", "Gestion de stock", "Service client"],
+    "description": "Mise en rayon, gestion des stocks et tenue du rayon selon les règles de merchandising.",
+    "image": "images/rayon.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Agent de sécurité",
+    "company": "SécuriPlus",
+    "location": "Bordeaux, France",
+    "type": "CDI",
+    "salary": "1 950 € / mois",
+    "compatibility": 84,
+    "tags": ["Sécurité", "Surveillance", "Prévention"],
+    "description": "Surveiller les accès d’un site industriel et assurer la protection des biens et des personnes.",
+    "image": "images/securite.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Jardinier paysagiste",
+    "company": "Les Jardins du Sud",
+    "location": "Gradignan, France",
+    "type": "CDI",
+    "salary": "1 800 € / mois",
+    "compatibility": 82,
+    "tags": ["Nature", "Aménagement", "Extérieur"],
+    "description": "Création et entretien d’espaces verts, tonte, taille et aménagement paysager.",
+    "image": "images/jardinier.jpg"
+  }
+]
