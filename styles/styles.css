@@ -721,9 +721,7 @@ textarea.form-control {
 }
 
 .action-buttons {
-    width: 100%; /* Ajuste la largeur pour s'assurer que le contenu reste sur une seule ligne */
-    display: flex; /* Utilise flexbox pour aligner les éléments */
-    justify-content: center; /* Centre les éléments horizontalement */
+  width: 100%;
 }
 
 .btn-action {
