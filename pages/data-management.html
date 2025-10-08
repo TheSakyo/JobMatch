@@ -162,37 +162,6 @@
         </div>
     </main>
 
-    <!-- Modal de contact -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeContactModal()">&times;</span>
-            <h2>📝 Contacter le responsable</h2>
-            <form id="responsableContactForm">
-                <div class="form-group">
-                    <label for="request-type">Type de demande :</label>
-                    <select id="request-type" name="request-type" required>
-                        <option value="">Sélectionnez</option>
-                        <option value="access">Droit d'accès</option>
-                        <option value="rectification">Droit de rectification</option>
-                        <option value="erasure">Droit à l'effacement</option>
-                        <option value="portability">Droit à la portabilité</option>
-                        <option value="opposition">Droit d'opposition</option>
-                        <option value="complaint">Réclamation</option>
-                        <option value="other">Autre</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="message" placeholder="Décrivez votre demande..." required></textarea>
-                </div>
-                <div class="action-buttons">
-                    <button type="submit" class="btn-action btn-primary">📤 Envoyer</button>
-                    <button type="button" class="btn-action btn-secondary" onclick="closeContactModal()">❌ Annuler</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
     <footer>
         <p>&copy; 2025 JobMatch. Tous droits réservés.</p>
         <div class="footer-links">
@@ -204,93 +173,6 @@
 
     <script src="../js/script.js"></script>
     <script src="../js/loadCookies.js"></script>
-    <script>
-        // Fonctions pour la gestion des données
-        function requestDataExport() {
-            if (confirm('Voulez-vous recevoir une copie de toutes vos données par email ?')) {
-                alert('Votre demande a été enregistrée. Vous recevrez vos données par email sous 48h.');
-                // Ici, implémentation de la logique backend
-            }
-        }
-
-        function showDataDetails() {
-            alert('Fonctionnalité en cours de développement. Contactez le responsable pour plus de détails.');
-        }
-
-        function requestCorrection() {
-            const error = prompt('Décrivez l\\'erreur à corriger :');
-            if (error) {
-                alert('Votre demande de correction a été transmise au responsable. Réponse sous 5 jours ouvrés.');
-            }
-        }
-
-        function requestPortability(format) {
-            if (confirm(`Voulez-vous télécharger vos données au format ${format.toUpperCase()} ?`)) {
-                alert(`Préparation de vos données au format ${format.toUpperCase()}. Téléchargement dans quelques instants.`);
-                // Ici, logique de génération et téléchargement
-            }
-        }
-
-        function manageConsents() {
-            // Réutilise le système de cookies
-            if (typeof showCookieSettings === 'function') {
-                showCookieSettings();
-            } else {
-                alert('Panneau de gestion des consentements en cours de chargement...');
-            }
-        }
-
-        function optOutMarketing() {
-            if (confirm('Voulez-vous vous désinscrire de tous les emails marketing ?')) {
-                alert('Vous avez été désinscrit des emails marketing. Vous ne recevrez plus que les emails essentiels.');
-                document.getElementById('newsletter-status').innerHTML = '❌ Newsletter (désinscrit)';
-            }
-        }
-
-        function limitProcessing() {
-            if (confirm('Voulez-vous limiter le traitement de vos données au strict minimum ?')) {
-                alert('Le traitement de vos données a été limité. Seules les fonctionnalités essentielles restent actives.');
-            }
-        }
-
-        function requestAccountDeactivation() {
-            if (confirm('Voulez-vous désactiver temporairement votre compte ? (réactivable à tout moment)')) {
-                alert('Votre compte sera désactivé sous 24h. Vous pourrez le réactiver en vous reconnectant.');
-            }
-        }
-
-        function requestAccountDeletion() {
-            const confirmation = prompt('Pour confirmer la suppression définitive, tapez "SUPPRIMER" :');
-            if (confirmation === 'SUPPRIMER') {
-                if (confirm('DERNIÈRE CONFIRMATION : Cette action est irréversible. Continuer ?')) {
-                    alert('Votre demande de suppression a été enregistrée. Votre compte sera supprimé sous 30 jours. Vous pouvez annuler cette demande en nous contactant.');
-                }
-            }
-        }
-
-        function openContactForm() {
-            document.getElementById('contactModal').style.display = 'block';
-        }
-
-        function closeContactModal() {
-            document.getElementById('contactModal').style.display = 'none';
-        }
-
-        // Gestion du formulaire de contact responsable
-        document.getElementById('responsableContactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Votre message a été envoyé au responsable. Réponse sous 5 jours ouvrés.');
-            closeContactModal();
-            this.reset();
-        });
-
-        // Fermeture de la modal en cliquant en dehors
-        window.onclick = function(event) {
-            const modal = document.getElementById('contactModal');
-            if (event.target == modal) {
-                closeContactModal();
-            }
-        }
-    </script>
+    <script src="../js/data-management.js"></script>
 </body>
 </html>
