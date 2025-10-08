@@ -854,6 +854,72 @@ textarea.form-control {
     color: black;
 }
 
+/* =========================
+   PAGES MENTION LÉGALE ET POLITIQUE DE CONFIDENTIALITÉ
+========================= */
+.legal-content,
+.privacy-content {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    line-height: 1.6;
+}
+
+.legal-content h1,
+.privacy-content h1 {
+    color: #004aad;
+    margin-bottom: 30px;
+}
+
+.legal-content h2,
+.privacy-content h2 {
+    color: #004aad;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.privacy-content h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.info-box,
+.contact-box {
+    background: #f0f4ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.warning-box {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #004aad;
+    color: white;
+}
+
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
