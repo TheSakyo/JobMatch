@@ -45,9 +45,3 @@ function requestAccountDeletion() {
 function openContactForm() {
     alert("Formulaire de contact ouvert.");
 }
-
-// Ajout d'écouteurs d'événements pour les boutons
-const contactButton = document.querySelector("#contactModalButton");
-if (contactButton) {
-    contactButton.addEventListener("click", openContactModal);
-}
