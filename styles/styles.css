@@ -302,7 +302,7 @@ section h2 {
   border-radius: var(--radius-xl);
   box-shadow: 0 8px 32px rgba(0, 74, 173, 0.08);
   transition: all var(--transition-base);
-  border: 1px solid rgba(0, 74, 173, 0.1);
+  border: 1px solid rgba(0, 74,173, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -721,10 +721,9 @@ textarea.form-control {
 }
 
 .action-buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-    flex-wrap: wrap;
+    width: 100%; /* Ajuste la largeur pour s'assurer que le contenu reste sur une seule ligne */
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    justify-content: center; /* Centre les éléments horizontalement */
 }
 
 .btn-action {
